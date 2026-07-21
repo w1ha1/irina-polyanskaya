@@ -41,4 +41,19 @@ describe('GalleryGrid', () => {
     await userEvent.click(screen.getByAltText('Портрет 1'));
     expect(onPhotoClick).toHaveBeenCalledWith(photos[0], photos);
   });
+
+  it('calls onPhotoClick with the narrowed filtered set, not the full photos prop, after filtering', async () => {
+    const onPhotoClick = vi.fn();
+    render(<GalleryGrid photos={photos} filters={filters} locale="ru" onPhotoClick={onPhotoClick} />);
+    await userEvent.click(screen.getByRole('tab', { name: 'Портрет' }));
+    await userEvent.click(screen.getByAltText('Портрет 1'));
+    // With the 'all' filter, filterPhotos returns the same array reference as
+    // `photos`, so a call site that mistakenly passes the raw `photos` prop
+    // instead of the filtered `visible` array would be indistinguishable from
+    // the correct behavior. Filtering first forces the two to diverge: this
+    // asserts the second argument is the single-item narrowed array, not the
+    // full 3-photo array — the exact contract Lightbox prev/next relies on.
+    expect(onPhotoClick).toHaveBeenCalledWith(photos[0], [photos[0]]);
+    expect(onPhotoClick).not.toHaveBeenCalledWith(photos[0], photos);
+  });
 });
