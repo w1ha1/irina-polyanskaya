@@ -34,12 +34,12 @@ No CMS/backend. Content lives in typed data files (`content/ru.ts`, `content/en.
 
 **Full photo audit completed during planning** (all 63 files reviewed via generated contact sheets). Actual visual distribution:
 - Фэшн/Ночная съёмка — 20 photos (male editorial series with fur/jewelry/pomegranate props; female series in traditional Armenian costume — both dramatic, styled, low-key lighting)
-- Love story — 28 photos (library couple session; rose-greenhouse couple session; vintage red car in a foggy field)
-- Портрет — 14 photos (male portraits against Gyumri's tuff-stone architecture) + 1 solo detail shot (reading, warm light)
-- Коммерческая — 1 photo (a jewelry/product close-up) — too few to sustain a filter
+- Love story — 32 photos (library couple session; rose-greenhouse couple session — including a solo back/roses detail shot and two couple frames originally mis-filed under "portrait"; vintage red car in a foggy field, including a Coca-Cola couple moment originally mis-filed as "commercial")
+- Портрет — 11 photos (male portraits against Gyumri's tuff-stone architecture, including one solo detail shot of hands reading a book)
+- Коммерческая — 0 photos — the photo originally thought to be a jewelry/product close-up is actually a love-story frame; no real commercial-style photo exists in the source set
 - Семейная — 0 photos — no family/children photography exists in the current source set
 
-**Decision:** the gallery filter uses only the 3 categories with real, substantial photo coverage — **Все / Портрет / Love story / Фэшн/Ночная съёмка**. "Семейная" and "Коммерческая" are dropped from the gallery filter (not enough source photos to populate them credibly) but remain listed in the landing page's Services section as bookable offerings — a service can be offered without the portfolio having a published example yet.
+**Decision:** the gallery filter uses only the 3 categories with real, substantial photo coverage — **Все / Портрет / Love story / Фэшн/Ночная съёмка**. "Семейная" and "Коммерческая" are dropped from the gallery filter (no source photos to populate them credibly) but remain listed in the landing page's Services section as bookable offerings — a service can be offered without the portfolio having a published example yet. Since there's no representative commercial photo either, the Services section's "Коммерческая съёмка" card is plain text like the other four, with no illustrating photo.
 
 Masonry grid of all 63 photos, filter pills as above. Filtering re-flows the grid with a FLIP animation. Clicking a photo opens a lightbox (keyboard arrows + swipe navigation, esc to close).
 
