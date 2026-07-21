@@ -1,4 +1,9 @@
-import { content, type Locale } from '@/content';
+import type { Locale } from '@/content';
+import { Hero } from '@/components/sections/Hero';
+import { About } from '@/components/sections/About';
+import { PortfolioTeaser } from '@/components/sections/PortfolioTeaser';
+import { Services } from '@/components/sections/Services';
+import { Pricing } from '@/components/sections/Pricing';
 
 export default async function LandingPage({
   params,
@@ -6,12 +11,14 @@ export default async function LandingPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const c = content[locale];
 
   return (
     <main>
-      <h1 className="font-display text-4xl p-8">{c.hero.name}</h1>
-      <p className="px-8 pb-8">{c.hero.subhead}</p>
+      <Hero locale={locale} />
+      <About locale={locale} />
+      <PortfolioTeaser locale={locale} />
+      <Services locale={locale} />
+      <Pricing locale={locale} />
     </main>
   );
 }
