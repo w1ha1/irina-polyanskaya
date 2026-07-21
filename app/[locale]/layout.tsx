@@ -4,6 +4,8 @@ import { cormorant, manrope, jetbrainsMono } from '../fonts';
 import { content, type Locale } from '@/content';
 import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
 import { CustomCursor } from '@/components/ui/CustomCursor';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -38,14 +40,20 @@ export default async function LocaleLayout({
   // guarantees only 'ru' | 'en' are ever produced.
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  // Narrow the widened `string` param back to `Locale` (see the comment above)
+  // so it can be passed to SiteHeader/SiteFooter, which are typed against the
+  // real union. generateStaticParams guarantees only 'ru' | 'en' are produced.
+  const locale: Locale = rawLocale === 'en' ? 'en' : 'ru';
 
   return (
     <html lang={locale} className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans bg-paper text-ink antialiased">
         <SmoothScrollProvider>
           <CustomCursor />
+          <SiteHeader locale={locale} />
           {children}
+          <SiteFooter locale={locale} />
         </SmoothScrollProvider>
       </body>
     </html>

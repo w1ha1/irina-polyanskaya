@@ -22,4 +22,16 @@ describe('toggleLocalePath', () => {
     expect(toggleLocalePath('/gallery', 'ru')).toBe('/gallery');
     expect(toggleLocalePath('/en/gallery', 'en')).toBe('/en/gallery');
   });
+
+  // Next's rewrites map '/' -> '/ru' and '/gallery' -> '/ru/gallery' transparently
+  // at the routing layer, but `usePathname()` reports the internal, rewritten path
+  // (e.g. '/ru') rather than the address-bar path (e.g. '/') on those pages. These
+  // internal paths must convert the same way their external equivalents do.
+  it('converts the internal RU landing path (as reported by usePathname on a rewritten route) to the EN landing path', () => {
+    expect(toggleLocalePath('/ru', 'en')).toBe('/en');
+  });
+
+  it('converts the internal RU gallery path (as reported by usePathname on a rewritten route) to the EN gallery path', () => {
+    expect(toggleLocalePath('/ru/gallery', 'en')).toBe('/en/gallery');
+  });
 });
