@@ -6,7 +6,7 @@
 
 **Architecture:** Next.js 15 App Router site, statically rendered, deployed to Vercel. Locale is expressed via route prefix (`/` = RU, `/en` = EN). All copy lives in typed content files; all photo metadata lives in one typed data file. Shared React components render both locales from the same content-driven props — no page duplicates business logic.
 
-**Tech Stack:** Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Motion (successor to Framer Motion) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Vercel.
+**Tech Stack:** Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Vercel.
 
 ## Global Constraints
 
@@ -116,8 +116,8 @@ Open the generated `.gitignore`. Confirm it already ignores `node_modules`, `.ne
 
 - [ ] **Step 4: Install runtime dependencies**
 
-Run: `npm install gsap lenis motion clsx`
-Expected: all four added to `dependencies` in `package.json`.
+Run: `npm install gsap lenis clsx`
+Expected: all three added to `dependencies` in `package.json`.
 
 - [ ] **Step 5: Install test dependencies**
 
