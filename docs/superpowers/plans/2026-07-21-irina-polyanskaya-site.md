@@ -2958,7 +2958,14 @@ export function Lightbox({
       className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95"
       onClick={onClose}
     >
-      <button aria-label="Close" onClick={onClose} className="absolute right-6 top-6 text-3xl text-paper">
+      <button
+        aria-label="Close"
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
+        className="absolute right-6 top-6 text-3xl text-paper"
+      >
         &times;
       </button>
       {photos.length > 1 && (
