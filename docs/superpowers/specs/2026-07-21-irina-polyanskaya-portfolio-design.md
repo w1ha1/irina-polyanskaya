@@ -32,13 +32,22 @@ No CMS/backend. Content lives in typed data files (`content/ru.ts`, `content/en.
 
 ## Gallery page (`/gallery`)
 
-Masonry grid of all 63 photos. Filter pills: **Все / Портрет / Love story / Фэшн / Ночная съёмка / Семейная / Коммерческая** (5 categories, chosen for how the actual photos read visually — distinct from the services list, see note below). Filtering re-flows the grid with a FLIP animation. Clicking a photo opens a lightbox (keyboard arrows + swipe navigation, esc to close).
+**Full photo audit completed during planning** (all 63 files reviewed via generated contact sheets). Actual visual distribution:
+- Фэшн/Ночная съёмка — 20 photos (male editorial series with fur/jewelry/pomegranate props; female series in traditional Armenian costume — both dramatic, styled, low-key lighting)
+- Love story — 28 photos (library couple session; rose-greenhouse couple session; vintage red car in a foggy field)
+- Портрет — 14 photos (male portraits against Gyumri's tuff-stone architecture) + 1 solo detail shot (reading, warm light)
+- Коммерческая — 1 photo (a jewelry/product close-up) — too few to sustain a filter
+- Семейная — 0 photos — no family/children photography exists in the current source set
 
-**Note — services vs. gallery categories are intentionally different lists.** The Services section on the landing page describes what a client can book (from Irina's real service menu). The gallery filter groups photos by visual style so the portfolio reads coherently — it includes "Фэшн/Ночная съёмка" (a strong visual signature in the photo set with no matching bookable service) and omits "Съёмка мероприятия" (no event photos in the current photo set) and "Мастер за работой" (marked "work in progress" / unfinished on Irina's existing Tilda page, dropped as not ready to publish).
+**Decision:** the gallery filter uses only the 3 categories with real, substantial photo coverage — **Все / Портрет / Love story / Фэшн/Ночная съёмка**. "Семейная" and "Коммерческая" are dropped from the gallery filter (not enough source photos to populate them credibly) but remain listed in the landing page's Services section as bookable offerings — a service can be offered without the portfolio having a published example yet.
 
-**Photo audit task (implementation-time):** review all 63 files in `assets/source-photos/`, assign each to one of the 5 gallery categories, write alt text, and record orientation (portrait/landscape/square) for masonry layout. Output: `data/photos.ts` (or `.json`) mapping filename → category, alt text, orientation. Select the hero image and the 6–8 portfolio-teaser images from this same pass — strong candidates already spotted: the couple photographed through a car window (`SnapInsta.to_607499680_...jpg`, love story) and several night portraits with disco-ball/light-leak lighting (fashion/night category). Final picks are made during this audit, not locked in advance, since only ~15 of 63 photos have been reviewed so far.
+Masonry grid of all 63 photos, filter pills as above. Filtering re-flows the grid with a FLIP animation. Clicking a photo opens a lightbox (keyboard arrows + swipe navigation, esc to close).
 
-Photos are copied from `assets/source-photos/` into the Next.js project (e.g. `public/photos/<category>/<slug>.jpg`), served via `next/image` for lazy loading, responsive sizing, and blur-up placeholders. Original files in `assets/` remain the untouched source of truth.
+**Note — services vs. gallery categories are intentionally different lists.** The Services section on the landing page describes what a client can book (from Irina's real service menu, 5 items). The gallery filter groups photos by visual style so the portfolio reads coherently.
+
+**Photo data is finalized** (no further audit needed) — the complete filename → category/alt-text/dimensions mapping is provided directly in the implementation plan's `data/photos.ts` task. Hero image and portfolio-teaser selections are also finalized there.
+
+Photos are copied from `assets/source-photos/` into the Next.js project (`public/photos/<category>/<slug>.jpg`), served via `next/image` for lazy loading, responsive sizing, and blur-up placeholders. Original files in `assets/` remain the untouched source of truth.
 
 ## Visual design system
 
