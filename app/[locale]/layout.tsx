@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { cormorant, manrope, jetbrainsMono } from '../fonts';
 import { content, type Locale } from '@/content';
+import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
+import { CustomCursor } from '@/components/ui/CustomCursor';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -40,7 +42,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans bg-paper text-ink antialiased">{children}</body>
+      <body className="font-sans bg-paper text-ink antialiased">
+        <SmoothScrollProvider>
+          <CustomCursor />
+          {children}
+        </SmoothScrollProvider>
+      </body>
     </html>
   );
 }
