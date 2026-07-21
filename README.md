@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Irina Polyanskaya — Photography Portfolio
 
-## Getting Started
+Bilingual (RU/EN) portfolio and business-card site for photographer Irina Polyanskaya (Gyumri, Armenia).
 
-First, run the development server:
+## Stack
+
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger, Flip, SplitText) · Lenis
+
+## Development
 
 ```bash
+npm install
+npm run copy-photos   # copies source photos from assets/ into public/photos/ (run once, or after editing data/photos.ts)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm test           # Vitest unit/component tests
+npm run test:e2e   # Playwright end-to-end smoke tests (builds and serves the app itself)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Routes
 
-## Learn More
+- `/` — RU landing
+- `/gallery` — RU gallery (rewritten from the internal `/ru` and `/ru/gallery` routes)
+- `/en` — EN landing
+- `/en/gallery` — EN gallery
 
-To learn more about Next.js, take a look at the following resources:
+## Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- All copy lives in `content/ru.ts` and `content/en.ts` (typed by `content/types.ts`).
+- All photo metadata (category, dimensions, bilingual alt text) lives in `data/photos.ts`.
+- Source photos live in `assets/source-photos` and `assets/source-about` — never edited directly. Run `npm run copy-photos` to (re)populate `public/photos/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed to Vercel from the `main` branch of `github.com/w1ha1/irina-polyanskaya`. See `docs/superpowers/specs/2026-07-21-irina-polyanskaya-portfolio-design.md` for the design spec and `docs/superpowers/plans/2026-07-21-irina-polyanskaya-site.md` for the implementation plan.
