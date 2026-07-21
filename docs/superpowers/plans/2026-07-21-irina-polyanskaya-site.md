@@ -4,9 +4,9 @@
 
 **Goal:** Build the bilingual (RU/EN) portfolio/business-card site for photographer Irina Polyanskaya described in `docs/superpowers/specs/2026-07-21-irina-polyanskaya-portfolio-design.md`.
 
-**Architecture:** Next.js 15 App Router site, statically rendered, deployed to Vercel. Locale is expressed via route prefix (`/` = RU, `/en` = EN). All copy lives in typed content files; all photo metadata lives in one typed data file. Shared React components render both locales from the same content-driven props — no page duplicates business logic.
+**Architecture:** Next.js 16 App Router site, statically rendered, deployed to Vercel. Locale is expressed via route prefix (`/` = RU, `/en` = EN). All copy lives in typed content files; all photo metadata lives in one typed data file. Shared React components render both locales from the same content-driven props — no page duplicates business logic.
 
-**Tech Stack:** Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Vercel.
+**Tech Stack:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Vercel.
 
 ## Global Constraints
 
@@ -3453,7 +3453,7 @@ Bilingual (RU/EN) portfolio and business-card site for photographer Irina Polyan
 
 ## Stack
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger, Flip, SplitText) · Lenis · Motion
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger, Flip, SplitText) · Lenis
 
 ## Development
 
