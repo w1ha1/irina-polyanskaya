@@ -19,10 +19,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = content[locale];
+  // Netlify sets `URL` to the site's canonical production URL (scheme included).
+  // Falls back to Vercel's `VERCEL_URL` (bare host, needs a scheme) in case this
+  // ever gets deployed there again, then to localhost for local dev.
+  const siteUrl =
+    process.env.URL ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined) ??
+    'http://localhost:3000';
   return {
-    metadataBase: new URL(
-      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
-    ),
+    metadataBase: new URL(siteUrl),
     title: c.meta.title,
     description: c.meta.description,
     alternates: { canonical: locale === 'ru' ? '/' : '/en' },

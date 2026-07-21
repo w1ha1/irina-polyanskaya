@@ -36,4 +36,4 @@ npm run test:e2e   # Playwright end-to-end smoke tests (builds and serves the ap
 
 ## Deployment
 
-Deployed to Vercel from the `main` branch of `github.com/w1ha1/irina-polyanskaya`. See `docs/superpowers/specs/2026-07-21-irina-polyanskaya-portfolio-design.md` for the design spec and `docs/superpowers/plans/2026-07-21-irina-polyanskaya-site.md` for the implementation plan.
+Deployed to Netlify (interim, for presentation) from the `main` branch of `github.com/w1ha1/irina-polyanskaya`, via the official `@netlify/plugin-nextjs` runtime (see `netlify.toml`) — no environment variables are required, Netlify's `URL` env var is picked up automatically for `metadataBase`. Once the site is approved, it's expected to move to permanent hosting with a purchased custom domain. See `docs/superpowers/specs/2026-07-21-irina-polyanskaya-portfolio-design.md` for the design spec and `docs/superpowers/plans/2026-07-21-irina-polyanskaya-site.md` for the implementation plan.

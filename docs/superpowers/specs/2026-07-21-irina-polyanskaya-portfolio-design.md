@@ -11,7 +11,7 @@ Source assets live in `assets/`:
 
 ## Architecture
 
-Next.js 15 (App Router), statically generated, deployed to Vercel.
+Next.js 16 (App Router), statically generated, deployed to Netlify (interim presentation hosting — see "Hosting" below; permanent hosting + a purchased domain follow if the site is approved).
 
 Routes:
 - `/` — landing page (RU, default locale)
@@ -76,7 +76,7 @@ Photos are copied from `assets/source-photos/` into the Next.js project (`public
 
 ## Tech stack
 
-Next.js 15 (App Router) + TypeScript + Tailwind CSS + GSAP (ScrollTrigger, Flip) + Lenis + Framer Motion, statically generated and deployed to Vercel.
+Next.js 16 (App Router) + TypeScript + Tailwind CSS + GSAP (ScrollTrigger, Flip, SplitText) + Lenis, statically generated and deployed to Netlify. (Framer Motion/Motion was dropped during implementation planning — GSAP alone covers every animation the spec calls for, so pulling in a second animation library would have been an unused dependency.)
 
 ## Content (approved drafts — first-launch copy, editable later)
 
@@ -110,8 +110,8 @@ Telegram: `t.me/polka977` · Instagram: `instagram.com/polyanskaya_photo7` · Г
 - No CMS or admin panel — content changes are code edits
 - No blog, e-commerce, or payment processing
 - No client proofing/delivery galleries
-- No custom domain purchase/setup (site ships on the default Vercel subdomain; a custom domain can be attached later)
-- No analytics/tracking beyond what Vercel provides by default
+- No custom domain purchase/setup (site ships on the default Netlify subdomain; a custom domain can be attached later if the site is approved)
+- No analytics/tracking beyond what the hosting platform provides by default
 
 ## Open items resolved during brainstorming
 
@@ -121,4 +121,4 @@ Telegram: `t.me/polka977` · Instagram: `instagram.com/polyanskaya_photo7` · Г
 - Location correction: Gyumri, not Yerevan
 - Booking CTA: direct links to Telegram/Instagram, no custom form/backend
 - Logo: typographic wordmark, no existing logo file
-- Hosting: Vercel
+- Hosting: Netlify (revised from the original Vercel choice after a real Vercel deployment attempt hit problems — Netlify is a host the team has used successfully before; interim for presenting to Irina, permanent hosting + domain to follow if she approves)

@@ -4,9 +4,9 @@
 
 **Goal:** Build the bilingual (RU/EN) portfolio/business-card site for photographer Irina Polyanskaya described in `docs/superpowers/specs/2026-07-21-irina-polyanskaya-portfolio-design.md`.
 
-**Architecture:** Next.js 16 App Router site, statically rendered, deployed to Vercel. Locale is expressed via route prefix (`/` = RU, `/en` = EN). All copy lives in typed content files; all photo metadata lives in one typed data file. Shared React components render both locales from the same content-driven props — no page duplicates business logic.
+**Architecture:** Next.js 16 App Router site, statically rendered, deployed to Netlify (interim presentation hosting — see Task 15's revision note; permanent hosting + a purchased domain follow if Irina approves the site). Locale is expressed via route prefix (`/` = RU, `/en` = EN). All copy lives in typed content files; all photo metadata lives in one typed data file. Shared React components render both locales from the same content-driven props — no page duplicates business logic.
 
-**Tech Stack:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Vercel.
+**Tech Stack:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + GSAP (ScrollTrigger, Flip, SplitText — all free) + Lenis (smooth scroll) + Vitest/React Testing Library (unit) + Playwright (E2E smoke tests). Deployed to Netlify (`@netlify/plugin-nextjs`), interim.
 
 ## Global Constraints
 
@@ -17,7 +17,7 @@
 - Services section (landing page) lists all 5 real services regardless of gallery photo coverage: Портретная, Love story, Коммерческая, Мероприятия, Семейная.
 - Booking CTA links only to Telegram (`https://t.me/polka977`) and Instagram (`https://instagram.com/polyanskaya_photo7`) — no contact form, no WhatsApp, no email surfaced.
 - `prefers-reduced-motion: reduce` must disable parallax, custom cursor, magnetic buttons, and scroll-triggered reveals — content must remain fully readable without them.
-- No CMS, no backend, no analytics beyond Vercel defaults, no custom domain setup.
+- No CMS, no backend, no analytics beyond the hosting platform's defaults, no custom domain setup.
 - Original files in `assets/` are never modified or deleted — only copied into `public/`.
 
 ## File Structure
@@ -3504,32 +3504,35 @@ git commit -m "Add favicon, Open Graph image, lint fixes, and README"
 
 ---
 
-## Task 15: Deploy to Vercel
+## Task 15: Deploy to Netlify (interim hosting for presentation)
 
-**Files:** none (deployment/configuration step, no code changes expected unless the build step below surfaces a fix).
+**Files:** `netlify.toml` (created), `package.json` (added `@netlify/plugin-nextjs` devDependency), `app/[locale]/layout.tsx` (`metadataBase` now reads Netlify's `URL` env var, with a `VERCEL_URL` fallback).
 
-This task requires interactive access to a Vercel account, which an autonomous agent does not have — perform it manually (or hand these exact steps to whoever has the account).
+**Revision note:** the original plan targeted Vercel. After a real deployment attempt on Vercel ran into problems, the decision was made to use Netlify instead — the same host the team has used successfully before — as an interim presentation target for Irina to review. If she approves the site, the plan is to move to permanent hosting with a purchased custom domain at that point (still out of scope for this task).
+
+This task requires interactive access to a Netlify account, which an autonomous agent does not have — perform it manually (or hand these exact steps to whoever has the account).
 
 - [ ] **Step 1: Push the finished branch**
 
 Run: `git push origin main`
-Expected: the already-connected `origin` remote (`https://github.com/w1ha1/irina-polyanskaya`, set up when the project folder was created) receives all commits from Tasks 1–14.
+Expected: the already-connected `origin` remote (`https://github.com/w1ha1/irina-polyanskaya`) receives all commits.
 
-- [ ] **Step 2: Import the repository into Vercel**
+- [ ] **Step 2: Import the repository into Netlify**
 
-In the Vercel dashboard: **Add New → Project → Import Git Repository**, select `w1ha1/irina-polyanskaya`. Vercel auto-detects the Next.js framework preset — leave build command (`next build`) and output settings at their defaults. No environment variables are required (no backend, no API keys). Click **Deploy**.
+In the Netlify dashboard: **Add new site → Import an existing project → Deploy with GitHub**, select `w1ha1/irina-polyanskaya`. Netlify reads `netlify.toml` and auto-applies the official `@netlify/plugin-nextjs` runtime — leave the build command (`npm run build`) at its default. No environment variables are required (no backend, no API keys; `metadataBase` resolves automatically from Netlify's own `URL` env var). Click **Deploy site**.
 
 - [ ] **Step 3: Verify the live deployment**
 
-Once the deployment finishes, open the generated `https://irina-polyanskaya-*.vercel.app` URL and check:
+Once the deployment finishes, open the generated `https://<site-name>.netlify.app` URL and check:
 - `/` renders the RU landing page with the hero photo visible.
 - `/en` renders the EN landing page.
 - `/gallery` and `/en/gallery` render the full photo grid; clicking a photo opens the lightbox.
 - The "Записаться"/"Book a session" buttons open Telegram with the prefilled message.
 - The Instagram link opens `instagram.com/polyanskaya_photo7`.
+- View page source on any route and confirm the `og:image`/canonical `<link>` tags point at the real `https://<site-name>.netlify.app/...` URL, not `localhost`.
 
-- [ ] **Step 4: (Optional, out of scope for this plan) attach a custom domain**
+- [ ] **Step 4: (Optional, out of scope for this plan) rename the site or attach a custom domain**
 
-Per the spec's non-goals, no custom domain purchase/setup is part of this plan. If Irina later buys a domain, attach it under the Vercel project's **Settings → Domains** — no code changes are needed for this.
+Per the spec's non-goals, no custom domain purchase/setup is part of this plan. Netlify's auto-generated subdomain can be renamed for free under **Site settings → Domain management → Options → Edit site name** (e.g. to `irina-polyanskaya.netlify.app`) for a cleaner link to send Irina. If the site is later approved and a domain is purchased, attach it under the same **Domain management** screen (on Netlify) or move to a different host entirely — no code changes are needed for either, since `metadataBase` already resolves from the platform's own URL env var at build time.
 
 ---
