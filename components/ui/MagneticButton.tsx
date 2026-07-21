@@ -36,10 +36,13 @@ export function MagneticButton({
   }
 
   if (href) {
+    const isExternal = /^https?:\/\//.test(href);
+
     return (
       <a
         ref={ref as React.RefObject<HTMLAnchorElement>}
         href={href}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         data-cursor-focus

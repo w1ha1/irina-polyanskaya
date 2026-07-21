@@ -2,6 +2,12 @@ import { content, type Locale } from '@/content';
 import { photos } from '@/data/photos';
 import { GallerySection } from '@/components/gallery/GallerySection';
 
+// Only 'ru' | 'en' are produced by generateStaticParams in layout.tsx. Without
+// this, Next's dynamicParams defaults to true and any other locale segment
+// (e.g. /fr) would still render this page with an unsupported `locale`,
+// throwing when content[locale] is dereferenced instead of 404ing cleanly.
+export const dynamicParams = false;
+
 export default async function GalleryPage({
   params,
 }: {

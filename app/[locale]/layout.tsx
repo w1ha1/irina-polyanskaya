@@ -20,6 +20,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const c = content[locale];
   return {
+    metadataBase: new URL(
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+    ),
     title: c.meta.title,
     description: c.meta.description,
     alternates: { canonical: locale === 'ru' ? '/' : '/en' },

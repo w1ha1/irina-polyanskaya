@@ -22,4 +22,18 @@ describe('MagneticButton', () => {
     render(<MagneticButton onClick={() => {}}>Записаться</MagneticButton>);
     expect(screen.getByRole('button')).toHaveAttribute('data-cursor-focus');
   });
+
+  it('opens external links in a new tab with rel safety attributes', () => {
+    render(<MagneticButton href="https://t.me/polka977">Telegram</MagneticButton>);
+    const link = screen.getByRole('link', { name: 'Telegram' });
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('does not add target/rel attributes to internal links', () => {
+    render(<MagneticButton href="/en/gallery">Gallery</MagneticButton>);
+    const link = screen.getByRole('link', { name: 'Gallery' });
+    expect(link).not.toHaveAttribute('target');
+    expect(link).not.toHaveAttribute('rel');
+  });
 });
