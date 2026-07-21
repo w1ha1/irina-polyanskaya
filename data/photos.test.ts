@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { photos, heroPhoto, teaserSlugs, aboutPhoto, commercialPhoto } from './photos';
+import { photos, heroPhoto, teaserSlugs, aboutPhoto, rotateOnCopy } from './photos';
 
 describe('photo data', () => {
-  it('has exactly 62 gallery photos', () => {
-    expect(photos).toHaveLength(62);
+  it('has exactly 63 gallery photos', () => {
+    expect(photos).toHaveLength(63);
   });
 
   it('has the expected count per category', () => {
@@ -12,8 +12,8 @@ describe('photo data', () => {
       return acc;
     }, {});
     expect(counts['fashion-night']).toBe(20);
-    expect(counts['love-story']).toBe(28);
-    expect(counts.portrait).toBe(14);
+    expect(counts['love-story']).toBe(32);
+    expect(counts.portrait).toBe(11);
   });
 
   it('has unique slugs', () => {
@@ -40,10 +40,13 @@ describe('photo data', () => {
     for (const s of teaserSlugs) expect(slugs.has(s)).toBe(true);
   });
 
-  it('defines aboutPhoto and commercialPhoto with bilingual alt text', () => {
+  it('defines aboutPhoto with bilingual alt text', () => {
     expect(aboutPhoto.alt.ru.length).toBeGreaterThan(0);
     expect(aboutPhoto.alt.en.length).toBeGreaterThan(0);
-    expect(commercialPhoto.alt.ru.length).toBeGreaterThan(0);
-    expect(commercialPhoto.alt.en.length).toBeGreaterThan(0);
+  });
+
+  it('only flags rotation for slugs that exist in the gallery set', () => {
+    const slugs = new Set(photos.map((p) => p.slug));
+    for (const slug of Object.keys(rotateOnCopy)) expect(slugs.has(slug)).toBe(true);
   });
 });

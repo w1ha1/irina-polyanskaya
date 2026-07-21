@@ -32,7 +32,7 @@ export const photos: Photo[] = [
   { slug: 'fashion-19', category: 'fashion-night', sourceFile: 'SnapInsta.to_622384590_18005273381836533_7579165405186333821_n.jpg', width: 720, height: 960, alt: { ru: 'Женщина в традиционном костюме на фоне ковра, с гранатом', en: 'Woman in traditional costume against a carpet backdrop, with a pomegranate' } },
   { slug: 'fashion-20', category: 'fashion-night', sourceFile: 'SnapInsta.to_622590539_18005275004836533_643580100597053556_n.jpg', width: 720, height: 960, alt: { ru: 'Крупный портрет женщины, пробующей гранат, красная помада', en: 'Close portrait of a woman tasting pomegranate, red lipstick' } },
 
-  // --- love-story (28) ---
+  // --- love-story (32) ---
   { slug: 'love-01', category: 'love-story', sourceFile: 'SnapInsta.to_656900870_18013061516836533_3224792205916951746_n.jpg', width: 720, height: 960, alt: { ru: 'Чёрно-белый коллаж: пара среди книжных стеллажей библиотеки', en: 'Black-and-white collage: a couple among library bookshelves' } },
   { slug: 'love-02', category: 'love-story', sourceFile: 'SnapInsta.to_657167545_18013061501836533_1051359062774219522_n.jpg', width: 720, height: 960, alt: { ru: 'Чёрно-белое фото пары в проходе между книжными полками', en: 'Black-and-white photo of a couple in a library aisle' } },
   { slug: 'love-03', category: 'love-story', sourceFile: 'SnapInsta.to_657742216_18013061510836533_6707210603101989341_n.jpg', width: 873, height: 1164, alt: { ru: 'Чёрно-белые крупные объятия пары в библиотеке', en: 'Black-and-white close embrace of a couple in a library' } },
@@ -51,32 +51,33 @@ export const photos: Photo[] = [
   { slug: 'love-16', category: 'love-story', sourceFile: 'SnapInsta.to_683675586_18016284242836533_6282242942333562559_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: девушка одна и пара на капоте автомобиля', en: 'Collage: a woman alone and a couple on the car hood' } },
   { slug: 'love-17', category: 'love-story', sourceFile: 'SnapInsta.to_683689455_18016284230836533_4304468973816964802_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: пара держится за руки в поле, ветер треплет волосы', en: "Collage: a couple holding hands in a field, wind in their hair" } },
   { slug: 'love-18', category: 'love-story', sourceFile: 'SnapInsta.to_683762691_18016284233836533_5115990997648937136_n.jpg', width: 720, height: 897, alt: { ru: 'Пара касается лбами в поле, пасмурное небо', en: 'A couple touching foreheads in a field, overcast sky' } },
-  { slug: 'love-19', category: 'love-story', sourceFile: 'SnapInsta.to_683766249_18017189375836533_6540760078989453481_n.jpg', width: 720, height: 900, alt: { ru: 'Сцепленные руки пары через окно машины под дождём', en: "A couple's clasped hands through a rain-streaked car window" } },
-  { slug: 'love-20', category: 'love-story', sourceFile: 'SnapInsta.to_684111780_18016284194836533_6198651596713270895_n.jpg', width: 720, height: 900, alt: { ru: 'Чёрно-белое фото пары в теплице в полный рост', en: 'Black-and-white full-length photo of a couple in a greenhouse' } },
-  { slug: 'love-21', category: 'love-story', sourceFile: 'SnapInsta.to_684843279_18016284212836533_4094334937703427035_n.jpg', width: 720, height: 900, alt: { ru: 'Пара обнимается среди зелени и белых роз в теплице', en: 'A couple embracing among greenery and white roses in a greenhouse' } },
+  { slug: 'love-19', category: 'love-story', sourceFile: 'SnapInsta.to_683766249_18017189375836533_6540760078989453481_n.jpg', width: 720, height: 900, alt: { ru: 'Пара в оранжерее: мужчина держится за опору, женщина смеётся среди роз', en: 'A couple in a greenhouse: the man holds on to a support post, the woman laughs among the roses' } },
+  { slug: 'love-20', category: 'love-story', sourceFile: 'SnapInsta.to_684111780_18016284194836533_6198651596713270895_n.jpg', width: 720, height: 900, alt: { ru: 'Пара касается носами в поле, пасмурное небо, цветное фото', en: 'A couple touching noses in a field, overcast sky, color photo' } },
+  { slug: 'love-21', category: 'love-story', sourceFile: 'SnapInsta.to_684843279_18016284212836533_4094334937703427035_n.jpg', width: 720, height: 900, alt: { ru: 'Сцепленные руки пары через окно машины под дождём', en: "A couple's clasped hands through a rain-streaked car window" } },
   { slug: 'love-22', category: 'love-story', sourceFile: 'SnapInsta.to_684855309_18017189345836533_2113241894251156481_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: отдых среди роз, деталь книги, поцелуй в листве', en: 'Collage: resting among roses, a book detail, a kiss in the leaves' } },
   { slug: 'love-23', category: 'love-story', sourceFile: 'SnapInsta.to_684946431_18017189402836533_4573255447170964092_n.jpg', width: 720, height: 900, alt: { ru: 'Чёрно-белое фото пары в теплице', en: 'Black-and-white photo of a couple in a greenhouse' } },
-  { slug: 'love-24', category: 'love-story', sourceFile: 'SnapInsta.to_685386164_18017189405836533_175695731233902322_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: девушка одна среди роз и пара в меховой накидке в теплице', en: 'Collage: a woman alone among roses and a couple in a fur wrap in the greenhouse' } },
-  { slug: 'love-25', category: 'love-story', sourceFile: 'SnapInsta.to_685956641_18017189429836533_2687868010405871520_n.jpg', width: 720, height: 900, alt: { ru: 'Девушка в красном платье и меховой накидке среди роз', en: 'A woman in a red dress and fur wrap among roses' } },
+  { slug: 'love-24', category: 'love-story', sourceFile: 'SnapInsta.to_685386164_18017189405836533_175695731233902322_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: девушка одна среди роз, деталь книги и объятия пары в теплице', en: 'Collage: a woman alone among roses, a book detail, and a couple embracing in the greenhouse' } },
+  { slug: 'love-25', category: 'love-story', sourceFile: 'SnapInsta.to_685956641_18017189429836533_2687868010405871520_n.jpg', width: 720, height: 900, alt: { ru: 'Пара в теплице: мужчина целует девушку в красном платье и меховой накидке среди роз', en: 'A couple in the greenhouse: a man kisses a woman in a red dress and fur wrap among roses' } },
   { slug: 'love-26', category: 'love-story', sourceFile: 'SnapInsta.to_687050582_18017189348836533_46706258812802475_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: девушка одна среди роз и вид вдоль ряда теплицы', en: 'Collage: a woman alone among roses and a view down the greenhouse row' } },
   { slug: 'love-27', category: 'love-story', sourceFile: 'SnapInsta.to_687284927_18017189387836533_3293444089339232783_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: пара с розой и гранатом среди зелени, романтичный кадр', en: 'Collage: a couple with a rose and pomegranate among greenery, a romantic frame' } },
   { slug: 'love-28', category: 'love-story', sourceFile: 'SnapInsta.to_688888300_18017189414836533_4901679097801555144_n.jpg', width: 720, height: 900, alt: { ru: 'Чёрно-белый нежный кадр двух силуэтов среди тёмной зелени', en: 'Black-and-white tender frame of two silhouettes among dark greenery' } },
+  { slug: 'love-29', category: 'love-story', sourceFile: 'SnapInsta.to_683894650_18016284197836533_7423984466739593885_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: пара пьёт колу в машине, цветной и чёрно-белый кадр', en: 'Collage: a couple drinking Coca-Cola in a car, a color and a black-and-white frame' } },
+  { slug: 'love-30', category: 'love-story', sourceFile: 'SnapInsta.to_688833219_18017189330836533_4736488998158937883_n.jpg', width: 720, height: 900, alt: { ru: 'Деталь: спина девушки с красной лямкой платья и жемчужным колье среди роз', en: "Detail: a woman's back with a red dress strap and a pearl necklace among roses" } },
+  { slug: 'love-31', category: 'love-story', sourceFile: 'SnapInsta.to_688886403_18017189327836533_3332075026162490702_n.jpg', width: 720, height: 900, alt: { ru: 'Пара целуется среди листвы и роз в оранжерее', en: 'A couple kissing among foliage and roses in the greenhouse' } },
+  { slug: 'love-32', category: 'love-story', sourceFile: 'SnapInsta.to_689064694_18017189360836533_4093826099256987331_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: пара среди роз в теплице, включая смазанный кадр в движении', en: 'Collage: a couple among roses in the greenhouse, including a motion-blurred frame' } },
 
-  // --- portrait (14) ---
+  // --- portrait (11) ---
   { slug: 'portrait-01', category: 'portrait', sourceFile: 'SnapInsta.to_657360749_18013061471836533_807684231671720313_n.jpg', width: 850, height: 1133, alt: { ru: 'Крупный план рук, листающих старую книгу, тёплый свет', en: 'Close-up of hands turning pages of an old book, warm light' } },
-  { slug: 'portrait-02', category: 'portrait', sourceFile: 'SnapInsta.to_681180916_18016284176836533_1248926197350596796_n.jpg', width: 720, height: 900, alt: { ru: 'Мужчина в дверном проёме на ярком свету, коллаж с деталью', en: 'Man in a doorway in bright light, collage with a detail shot' } },
-  { slug: 'portrait-03', category: 'portrait', sourceFile: 'SnapInsta.to_688833219_18017189330836533_4736488998158937883_n.jpg', width: 720, height: 900, alt: { ru: 'Коллаж: портрет мужчины у стены, деталь часов, на ступенях', en: 'Collage: portrait of a man by a wall, a watch detail, on the steps' } },
-  { slug: 'portrait-04', category: 'portrait', sourceFile: 'SnapInsta.to_688886403_18017189327836533_3332075026162490702_n.jpg', width: 720, height: 900, alt: { ru: 'Мужчина стоит у старинной каменной стены', en: 'A man standing by an old stone wall' } },
-  { slug: 'portrait-05', category: 'portrait', sourceFile: 'SnapInsta.to_689064694_18017189360836533_4093826099256987331_n.jpg', width: 720, height: 900, alt: { ru: 'Историческое туфовое здание в Гюмри', en: 'A historic tuff-stone building in Gyumri' } },
-  { slug: 'portrait-06', category: 'portrait', sourceFile: 'SnapInsta.to_749756064_18027194900836533_4093777991618701705_n.jpg', width: 720, height: 960, alt: { ru: 'Коллаж: мужчина у стены и чёрно-белая сцена у железной дороги', en: 'Collage: a man by a wall and a black-and-white railway scene' } },
-  { slug: 'portrait-07', category: 'portrait', sourceFile: 'SnapInsta.to_750086049_18027194873836533_6795609942903314071_n.jpg', width: 720, height: 960, alt: { ru: 'Чёрно-белый кадр резного дверного портала', en: 'Black-and-white shot of a carved doorway portal' } },
-  { slug: 'portrait-08', category: 'portrait', sourceFile: 'SnapInsta.to_750255781_18027195026836533_7800854702609093709_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина на лестнице заброшенной постройки среди зелени', en: 'A man on the stairs of an abandoned structure among greenery' } },
-  { slug: 'portrait-09', category: 'portrait', sourceFile: 'SnapInsta.to_750828779_18027194870836533_6194109473403876595_n.jpg', width: 720, height: 960, alt: { ru: 'Фасад церкви в Гюмри с фигурами вдалеке', en: 'A church façade in Gyumri with figures in the distance' } },
-  { slug: 'portrait-10', category: 'portrait', sourceFile: 'SnapInsta.to_752451353_18027194897836533_5579632822793879720_n.jpg', width: 720, height: 960, alt: { ru: 'Коллаж: портрет мужчины у резной арки в тёплом свете', en: 'Collage: portrait of a man by a carved archway in warm light' } },
-  { slug: 'portrait-11', category: 'portrait', sourceFile: 'SnapInsta.to_753093095_18027194978836533_8226840323895672037_n.jpg', width: 720, height: 960, alt: { ru: 'Чёрно-белый кадр арочного дверного портала', en: 'Black-and-white shot of an arched doorway portal' } },
-  { slug: 'portrait-12', category: 'portrait', sourceFile: 'SnapInsta.to_753224968_18027194882836533_6796361134869352882_n.jpg', width: 720, height: 960, alt: { ru: 'Портрет мужчины у резной арки, тёплый свет', en: 'Portrait of a man by a carved archway, warm light' } },
-  { slug: 'portrait-13', category: 'portrait', sourceFile: 'SnapInsta.to_753255037_18027194960836533_2427192636046982643_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина у резной деревянной двери, в полный рост', en: 'A man by a carved wooden door, full length' } },
-  { slug: 'portrait-14', category: 'portrait', sourceFile: 'SnapInsta.to_753418340_18027194996836533_5475697382716152589_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина, облокотившийся на текстурную каменную стену', en: 'A man leaning against a textured stone wall' } },
+  { slug: 'portrait-02', category: 'portrait', sourceFile: 'SnapInsta.to_681180916_18016284176836533_1248926197350596796_n.jpg', width: 900, height: 720, alt: { ru: 'Мужчина крупным планом, на фоне размыто — женщина у автомобиля в горах', en: 'Close-up of a man, with a woman by a car in the mountains blurred in the background' } },
+  { slug: 'portrait-03', category: 'portrait', sourceFile: 'SnapInsta.to_749756064_18027194900836533_4093777991618701705_n.jpg', width: 720, height: 960, alt: { ru: 'Коллаж: мужчина у стены в тёплом свете, блик радуги, деталь наручных часов, на ступенях', en: 'Collage: a man by a wall in warm light, a rainbow flare, a wristwatch detail, on the steps' } },
+  { slug: 'portrait-04', category: 'portrait', sourceFile: 'SnapInsta.to_750086049_18027194873836533_6795609942903314071_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина у туфовой стены с оконными проёмами', en: 'A man by a tuff-stone wall with window openings' } },
+  { slug: 'portrait-05', category: 'portrait', sourceFile: 'SnapInsta.to_750255781_18027195026836533_7800854702609093709_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина на лестнице заброшенной постройки среди зелени', en: 'A man on the stairs of an abandoned structure among greenery' } },
+  { slug: 'portrait-06', category: 'portrait', sourceFile: 'SnapInsta.to_750828779_18027194870836533_6194109473403876595_n.jpg', width: 720, height: 960, alt: { ru: 'Фасад церкви в Гюмри с фигурой вдалеке', en: 'A church façade in Gyumri with a figure in the distance' } },
+  { slug: 'portrait-07', category: 'portrait', sourceFile: 'SnapInsta.to_752451353_18027194897836533_5579632822793879720_n.jpg', width: 720, height: 960, alt: { ru: 'Коллаж: портрет мужчины у стены с чашкой кофе, тёплый свет', en: 'Collage: portrait of a man by a wall with a coffee cup, warm light' } },
+  { slug: 'portrait-08', category: 'portrait', sourceFile: 'SnapInsta.to_753093095_18027194978836533_8226840323895672037_n.jpg', width: 960, height: 720, alt: { ru: 'Чёрно-белый кадр арочного дверного портала', en: 'Black-and-white shot of an arched doorway portal' } },
+  { slug: 'portrait-09', category: 'portrait', sourceFile: 'SnapInsta.to_753224968_18027194882836533_6796361134869352882_n.jpg', width: 720, height: 960, alt: { ru: 'Портрет мужчины у резной арки, тёплый свет', en: 'Portrait of a man by a carved archway, warm light' } },
+  { slug: 'portrait-10', category: 'portrait', sourceFile: 'SnapInsta.to_753255037_18027194960836533_2427192636046982643_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина у резной деревянной двери, в полный рост', en: 'A man by a carved wooden door, full length' } },
+  { slug: 'portrait-11', category: 'portrait', sourceFile: 'SnapInsta.to_753418340_18027194996836533_5475697382716152589_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина, облокотившийся на деревянный столб у лестницы', en: 'A man leaning against a wooden post by the stairs' } },
 ];
 
 export const heroPhoto: Photo = photos.find((p) => p.slug === 'fashion-20')!;
@@ -87,8 +88,8 @@ export const teaserSlugs: string[] = [
   'love-19',
   'love-21',
   'love-11',
-  'portrait-04',
-  'portrait-13',
+  'portrait-09',
+  'portrait-10',
 ];
 
 export const aboutPhoto = {
@@ -101,12 +102,12 @@ export const aboutPhoto = {
   },
 };
 
-export const commercialPhoto = {
-  sourceFile: 'SnapInsta.to_683894650_18016284197836533_7423984466739593885_n.jpg',
-  width: 720,
-  height: 900,
-  alt: {
-    ru: 'Детальный кадр украшения на коже, пример предметной съёмки',
-    en: 'Detail shot of jewelry on skin, an example of product photography',
-  },
+/**
+ * Two source files (portrait-02, portrait-08) are physically rotated 90° in the
+ * original export — no EXIF orientation flag, the pixel data itself is sideways.
+ * copy-photos.mjs rotates these two slugs 90° clockwise when copying into public/.
+ */
+export const rotateOnCopy: Record<string, number> = {
+  'portrait-02': 90,
+  'portrait-08': 90,
 };
