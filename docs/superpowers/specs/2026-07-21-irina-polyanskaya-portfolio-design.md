@@ -68,11 +68,12 @@ Photos are copied from `assets/source-photos/` into the Next.js project (`public
 
 - Lenis for smooth inertia scrolling, synced with GSAP ScrollTrigger
 - Mask-reveal wipes on photos as they enter the viewport; headlines split into lines and animate up
-- Custom cursor: ring that morphs into an autofocus bracket over photos/links
 - Gallery: GSAP Flip plugin for category-filter re-layout; lightbox with keyboard/swipe nav
 - Magnetic hover effect on primary CTA buttons
 - Very low-opacity film-grain texture overlay (subtle, not a heavy AI-style glow/gradient effect)
-- `prefers-reduced-motion: reduce` disables parallax, custom cursor, and magnetic effects; content remains fully usable with simple fades
+- `prefers-reduced-motion: reduce` disables parallax and magnetic effects; content remains fully usable with simple fades
+
+> **Post-launch note (2026-07-22):** the custom cursor (ring that morphed into an autofocus bracket over photos/links) was removed — it visually blended into the site's own palette, the native OS cursor still rendered on top of it, and on touch devices (iPad) the ring stayed stranded on screen after a tap since there's no mouse to trigger its hide state.
 
 ## Tech stack
 

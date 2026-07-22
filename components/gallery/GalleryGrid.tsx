@@ -51,7 +51,6 @@ export function GalleryGrid({
           <button
             key={photo.slug}
             type="button"
-            data-cursor-focus
             onClick={() => onPhotoClick(photo, visible)}
             className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-sm"
           >

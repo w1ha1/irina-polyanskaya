@@ -45,7 +45,6 @@ export function MagneticButton({
         {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        data-cursor-focus
         className={cn(baseClass, className)}
       >
         {children}
@@ -60,7 +59,6 @@ export function MagneticButton({
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      data-cursor-focus
       className={cn(baseClass, className)}
     >
       {children}

@@ -18,11 +18,6 @@ describe('MagneticButton', () => {
     expect(onClick).toHaveBeenCalledOnce();
   });
 
-  it('marks itself as a cursor focus target', () => {
-    render(<MagneticButton onClick={() => {}}>Записаться</MagneticButton>);
-    expect(screen.getByRole('button')).toHaveAttribute('data-cursor-focus');
-  });
-
   it('opens external links in a new tab with rel safety attributes', () => {
     render(<MagneticButton href="https://t.me/polka977">Telegram</MagneticButton>);
     const link = screen.getByRole('link', { name: 'Telegram' });

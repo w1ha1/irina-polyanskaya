@@ -20,7 +20,6 @@ export function CategoryFilter({
           role="tab"
           aria-selected={active === f.id}
           onClick={() => onChange(f.id)}
-          data-cursor-focus
           className={cn(
             'rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors',
             active === f.id ? 'border-ink bg-ink text-paper' : 'border-ink/30 text-ink/70 hover:border-ink'

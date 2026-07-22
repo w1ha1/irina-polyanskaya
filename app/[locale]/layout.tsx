@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import { cormorant, manrope, jetbrainsMono } from '../fonts';
 import { content, type Locale } from '@/content';
 import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
-import { CustomCursor } from '@/components/ui/CustomCursor';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import '../globals.css';
@@ -58,7 +57,6 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans bg-paper text-ink antialiased">
         <SmoothScrollProvider>
-          <CustomCursor />
           <SiteHeader locale={locale} />
           {children}
           <SiteFooter locale={locale} />
