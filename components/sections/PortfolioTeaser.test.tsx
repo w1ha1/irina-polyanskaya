@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { PortfolioTeaser } from './PortfolioTeaser';
 
 describe('PortfolioTeaser', () => {
-  it('renders exactly 7 teaser photos', () => {
+  it('renders exactly 8 teaser photos', () => {
     render(<PortfolioTeaser locale="ru" />);
-    expect(screen.getAllByRole('img')).toHaveLength(7);
+    expect(screen.getAllByRole('img')).toHaveLength(8);
   });
 
   it('links "view all" to the RU gallery', () => {
