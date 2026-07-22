@@ -8,7 +8,7 @@ export function About({ locale }: { locale: Locale }) {
   const c = content[locale];
 
   return (
-    <section id="about" className="grid gap-8 px-6 py-16 md:grid-cols-2 md:items-start md:py-24">
+    <section id="about" className="grid gap-8 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
       <HudFrame label={locale === 'ru' ? 'ПОРТРЕТ АВТОРА' : 'PHOTOGRAPHER'} className="order-2 md:order-1">
         <RevealImage
           src="/photos/about/about-irina.jpg"
@@ -16,6 +16,7 @@ export function About({ locale }: { locale: Locale }) {
           width={aboutPhoto.width}
           height={aboutPhoto.height}
           sizes="(min-width: 768px) 50vw, 100vw"
+          className="md:h-[560px] lg:h-[600px]"
         />
       </HudFrame>
       <div className="order-1 md:order-2">

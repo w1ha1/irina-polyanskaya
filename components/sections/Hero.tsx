@@ -10,7 +10,7 @@ export function Hero({ locale }: { locale: Locale }) {
   const base = locale === 'ru' ? '' : '/en';
 
   return (
-    <section className="grid gap-8 px-6 py-16 md:grid-cols-2 md:items-start md:py-24">
+    <section className="grid gap-8 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
       <div>
         <p className="font-mono text-xs uppercase tracking-wider text-wine">{c.hero.kicker}</p>
         <SplitHeading as="h1" className="mt-4 font-display text-5xl leading-tight md:text-6xl">
@@ -32,6 +32,7 @@ export function Hero({ locale }: { locale: Locale }) {
           height={heroPhoto.height}
           priority
           sizes="(min-width: 768px) 50vw, 100vw"
+          className="md:h-[640px] lg:h-[720px]"
         />
       </HudFrame>
     </section>
