@@ -40,6 +40,13 @@ export function RevealImage({
           clipPath: 'inset(0% 0% 0% 0%)',
           duration: 1.1,
           ease: 'power3.out',
+          // A finished inset(0%) clip-path is a visual no-op but its mere
+          // presence still creates a new stacking context — with certain
+          // GPU/compositing setups that stranded context stops sibling
+          // absolutely-positioned elements (the HudFrame corner label) from
+          // painting at all. Dropping the inline style once the reveal is
+          // done removes the stacking context along with it.
+          clearProps: 'clipPath',
           scrollTrigger: { trigger: el, start: 'top 85%' },
         }
       );
