@@ -11,9 +11,9 @@ describe('photo data', () => {
       acc[p.category] = (acc[p.category] ?? 0) + 1;
       return acc;
     }, {});
-    expect(counts[UNCATEGORIZED_CATEGORY]).toBe(20);
-    expect(counts['love-story']).toBe(32);
-    expect(counts.portrait).toBe(11);
+    expect(counts[UNCATEGORIZED_CATEGORY]).toBe(8);
+    expect(counts['love-story']).toBe(33);
+    expect(counts.portrait).toBe(22);
   });
 
   it('has unique slugs', () => {

@@ -24,8 +24,8 @@ export const photos: Photo[] = generatedPhotos;
 export const heroPhoto: Photo = photos.find((p) => p.slug === 'love-14')!;
 
 export const teaserSlugs: string[] = [
-  'fashion-16',
-  'fashion-10',
+  'portrait-23',
+  'portrait-12',
   'love-19',
   'love-21',
   'love-11',
@@ -50,8 +50,8 @@ export const aboutPhoto = {
  * copy-photos.mjs rotates these two slugs 90° clockwise when copying into public/.
  */
 export const rotateOnCopy: Record<string, number> = {
-  'portrait-02': 90,
   'portrait-08': 90,
+  'love-33': 90,
 };
 
 /**
