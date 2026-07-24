@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { photos, heroPhoto, teaserSlugs, aboutPhoto, rotateOnCopy } from './photos';
+import { photos, heroPhoto, teaserSlugs, aboutPhoto, rotateOnCopy, UNCATEGORIZED_CATEGORY } from './photos';
 
 describe('photo data', () => {
   it('has exactly 63 gallery photos', () => {
@@ -11,7 +11,7 @@ describe('photo data', () => {
       acc[p.category] = (acc[p.category] ?? 0) + 1;
       return acc;
     }, {});
-    expect(counts['fashion-night']).toBe(20);
+    expect(counts[UNCATEGORIZED_CATEGORY]).toBe(20);
     expect(counts['love-story']).toBe(32);
     expect(counts.portrait).toBe(11);
   });

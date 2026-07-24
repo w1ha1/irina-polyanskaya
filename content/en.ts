@@ -23,7 +23,7 @@ export const en: SiteContent = {
   },
   about: {
     heading: 'About',
-    body: 'Irina Polyanskaya, photographer, based in Gyumri. Five years shooting portraits, love stories, and commercial work. I look for the place where warm light meets real emotion — a disco ball in a dark room, a rose in a greenhouse, the shadow of an old tuff-stone house.',
+    body: 'My name is Irina, and I am a professional photographer with 5 years of experience creating vibrant and memorable images. My work encompasses portrait, wedding, and commercial photography, and I am passionate about capturing unique moments and emotions. My style combines classic elegance with a modern approach, allowing me to create photographs that reflect your individuality and unique character.',
   },
   portfolioTeaser: {
     heading: 'Portfolio',
@@ -74,14 +74,9 @@ export const en: SiteContent = {
   },
   gallery: {
     heading: 'Portfolio',
-    filters: [
-      { id: 'all', label: 'All' },
-      { id: 'portrait', label: 'Portrait' },
-      { id: 'love-story', label: 'Love story' },
-      { id: 'fashion-night', label: 'Fashion/Night' },
-    ],
+    allLabel: 'All',
   },
   footer: {
-    rights: 'Irina Polyanskaya. All rights reserved.',
+    rights: 'Irina Polyanskaya',
   },
 };

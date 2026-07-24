@@ -26,11 +26,6 @@ describe('bilingual content parity', () => {
     expect(content.en.pricing.tiers).toHaveLength(2);
   });
 
-  it('gallery filters are all and the 3 real categories', () => {
-    const ids = content.ru.gallery.filters.map((f) => f.id);
-    expect(ids).toEqual(['all', 'portrait', 'love-story', 'fashion-night']);
-  });
-
   it('no string field is empty in either locale', () => {
     function checkStrings(obj: unknown, path = ''): void {
       if (typeof obj === 'string') {

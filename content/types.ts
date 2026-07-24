@@ -46,7 +46,7 @@ export interface SiteContent {
   };
   gallery: {
     heading: string;
-    filters: { id: 'all' | 'portrait' | 'love-story' | 'fashion-night'; label: string }[];
+    allLabel: string;
   };
   footer: {
     rights: string;
