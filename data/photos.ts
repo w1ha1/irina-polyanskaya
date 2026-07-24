@@ -80,7 +80,7 @@ export const photos: Photo[] = [
   { slug: 'portrait-11', category: 'portrait', sourceFile: 'SnapInsta.to_753418340_18027194996836533_5475697382716152589_n.jpg', width: 720, height: 960, alt: { ru: 'Мужчина, облокотившийся на деревянный столб у лестницы', en: 'A man leaning against a wooden post by the stairs' } },
 ];
 
-export const heroPhoto: Photo = photos.find((p) => p.slug === 'love-31')!;
+export const heroPhoto: Photo = photos.find((p) => p.slug === 'love-02')!;
 
 export const teaserSlugs: string[] = [
   'fashion-16',
