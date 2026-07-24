@@ -24,14 +24,14 @@ export const photos: Photo[] = generatedPhotos;
 export const heroPhoto: Photo = photos.find((p) => p.slug === 'love-14')!;
 
 export const teaserSlugs: string[] = [
-  'portrait-23',
-  'portrait-12',
+  'love-31',
+  'love-05',
   'love-19',
   'love-21',
-  'love-11',
+  'love-02',
   'portrait-09',
-  'portrait-10',
-  'fashion-19',
+  'portrait-12',
+  'portrait-23',
 ];
 
 export const aboutPhoto = {
