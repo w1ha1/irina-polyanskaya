@@ -24,7 +24,7 @@ export function Hero({ locale }: { locale: Locale }) {
           <MagneticButton href={`${base}/gallery`}>{c.hero.ctaSecondary}</MagneticButton>
         </div>
       </div>
-      <HudFrame label="35mm · f/1.8 · ISO 200">
+      <HudFrame>
         <RevealImage
           src={`/photos/${heroPhoto.category}/${heroPhoto.slug}.jpg`}
           alt={heroPhoto.alt[locale]}
