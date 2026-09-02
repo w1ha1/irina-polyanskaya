@@ -24,7 +24,7 @@ export function Pricing({ locale }: { locale: Locale }) {
             onClick={() => setCity(option)}
             aria-pressed={city === option}
             className={cn(
-              'rounded-full border px-4 py-2 transition-colors',
+              'rounded-full border px-4 py-2 transition-colors md:px-6 md:py-3 md:text-sm',
               city === option ? 'border-wine bg-wine text-paper' : 'border-ink/15 text-ink/70'
             )}
           >
