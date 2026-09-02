@@ -1,3 +1,4 @@
+import type { Locale } from '@/content';
 import { generatedPhotos } from './photos.generated';
 
 export type PhotoCategory = string;
@@ -9,6 +10,12 @@ export interface Photo {
   width: number;
   height: number;
   alt: { ru: string; en: string };
+}
+
+// Photo captions are only written in ru/en; hy falls back to the ru caption
+// rather than requiring a hand-written Armenian caption for every photo.
+export function altText(alt: { ru: string; en: string }, locale: Locale): string {
+  return alt[locale === 'hy' ? 'ru' : locale];
 }
 
 /**

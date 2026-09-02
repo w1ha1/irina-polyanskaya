@@ -14,9 +14,9 @@ function photo(slug: string, category: string): Photo {
 }
 
 const labels = {
-  portrait: { ru: 'Портрет', en: 'Portrait' },
-  'love-story': { ru: 'Love story', en: 'Love story' },
-  'fashion-night': { ru: 'Фэшн/Ночная съёмка', en: 'Fashion/Night' },
+  portrait: { ru: 'Портрет', en: 'Portrait', hy: 'Դիմանկար' },
+  'love-story': { ru: 'Love story', en: 'Love story', hy: 'Love story' },
+  'fashion-night': { ru: 'Фэшн/Ночная съёмка', en: 'Fashion/Night', hy: 'Ֆեշն/գիշերային նկարահանում' },
 };
 
 describe('buildGalleryFilters', () => {

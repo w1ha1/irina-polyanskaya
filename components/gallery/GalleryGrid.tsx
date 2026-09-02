@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
-import type { Photo, PhotoCategory } from '@/data/photos';
+import { altText, type Photo, type PhotoCategory } from '@/data/photos';
 import type { Locale } from '@/content';
 import { filterPhotos } from '@/lib/filterPhotos';
 import { useReducedMotion } from '@/lib/useReducedMotion';
@@ -56,7 +56,7 @@ export function GalleryGrid({
           >
             <Image
               src={`/photos/${photo.category}/${photo.slug}.jpg`}
-              alt={photo.alt[locale]}
+              alt={altText(photo.alt, locale)}
               width={photo.width}
               height={photo.height}
               sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"

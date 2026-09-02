@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { content } from './index';
+import type { Locale } from './types';
+
+const locales: Locale[] = ['ru', 'en', 'hy'];
 
 function keys(obj: unknown, prefix = ''): string[] {
   if (obj === null || typeof obj !== 'object') return [prefix];
@@ -11,22 +14,26 @@ function keys(obj: unknown, prefix = ''): string[] {
   );
 }
 
-describe('bilingual content parity', () => {
-  it('ru and en expose the same key structure', () => {
-    expect(keys(content.ru).sort()).toEqual(keys(content.en).sort());
+describe('content parity across locales', () => {
+  it('ru, en, and hy expose the same key structure', () => {
+    const ruKeys = keys(content.ru).sort();
+    expect(keys(content.en).sort()).toEqual(ruKeys);
+    expect(keys(content.hy).sort()).toEqual(ruKeys);
   });
 
-  it('services has exactly 5 items in both locales', () => {
-    expect(content.ru.services.items).toHaveLength(5);
-    expect(content.en.services.items).toHaveLength(5);
+  it('services has exactly 5 items in every locale', () => {
+    for (const locale of locales) {
+      expect(content[locale].services.items).toHaveLength(5);
+    }
   });
 
-  it('pricing has exactly 2 tiers in both locales', () => {
-    expect(content.ru.pricing.tiers).toHaveLength(2);
-    expect(content.en.pricing.tiers).toHaveLength(2);
+  it('pricing has exactly 2 tiers in every locale', () => {
+    for (const locale of locales) {
+      expect(content[locale].pricing.tiers).toHaveLength(2);
+    }
   });
 
-  it('no string field is empty in either locale', () => {
+  it('no string field is empty in any locale', () => {
     function checkStrings(obj: unknown, path = ''): void {
       if (typeof obj === 'string') {
         expect(obj.trim().length, `${path} should not be empty`).toBeGreaterThan(0);
@@ -40,7 +47,6 @@ describe('bilingual content parity', () => {
         for (const [k, v] of Object.entries(obj)) checkStrings(v, path ? `${path}.${k}` : k);
       }
     }
-    checkStrings(content.ru, 'ru');
-    checkStrings(content.en, 'en');
+    for (const locale of locales) checkStrings(content[locale], locale);
   });
 });

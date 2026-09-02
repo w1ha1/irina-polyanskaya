@@ -15,10 +15,12 @@ test('EN landing shows English copy', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Book a session' }).first()).toBeVisible();
 });
 
-test('language switcher moves from RU to EN and back', async ({ page }) => {
+test('language switcher moves between RU, EN, and HY', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Switch language' }).click();
+  await page.getByRole('link', { name: 'EN', exact: true }).click();
   await expect(page).toHaveURL(/\/en$/);
-  await page.getByRole('link', { name: 'Switch language' }).click();
+  await page.getByRole('link', { name: 'HY', exact: true }).click();
+  await expect(page).toHaveURL(/\/hy$/);
+  await page.getByRole('link', { name: 'RU', exact: true }).click();
   await expect(page).toHaveURL(/\/$/);
 });

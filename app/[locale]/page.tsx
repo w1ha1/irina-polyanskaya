@@ -4,7 +4,7 @@ import { PortfolioTeaser } from '@/components/sections/PortfolioTeaser';
 import { Services } from '@/components/sections/Services';
 import { Pricing } from '@/components/sections/Pricing';
 
-// Only 'ru' | 'en' are produced by generateStaticParams in layout.tsx. Without
+// Only 'ru' | 'en' | 'hy' are produced by generateStaticParams in layout.tsx. Without
 // this, Next's dynamicParams defaults to true and any other locale segment
 // (e.g. /fr) would still render this page with an unsupported `locale`,
 // throwing when content[locale] is dereferenced instead of 404ing cleanly.

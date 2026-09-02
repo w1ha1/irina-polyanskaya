@@ -1,26 +1,35 @@
 import { describe, it, expect } from 'vitest';
-import { toggleLocalePath } from './localePath';
+import { localePath } from './localePath';
 
-describe('toggleLocalePath', () => {
+describe('localePath', () => {
   it('converts the RU landing path to the EN landing path', () => {
-    expect(toggleLocalePath('/', 'en')).toBe('/en');
+    expect(localePath('/', 'en')).toBe('/en');
   });
 
   it('converts the EN landing path to the RU landing path', () => {
-    expect(toggleLocalePath('/en', 'ru')).toBe('/');
+    expect(localePath('/en', 'ru')).toBe('/');
   });
 
   it('converts the RU gallery path to the EN gallery path', () => {
-    expect(toggleLocalePath('/gallery', 'en')).toBe('/en/gallery');
+    expect(localePath('/gallery', 'en')).toBe('/en/gallery');
   });
 
   it('converts the EN gallery path to the RU gallery path', () => {
-    expect(toggleLocalePath('/en/gallery', 'ru')).toBe('/gallery');
+    expect(localePath('/en/gallery', 'ru')).toBe('/gallery');
+  });
+
+  it('converts the RU landing path to the HY landing path', () => {
+    expect(localePath('/', 'hy')).toBe('/hy');
+  });
+
+  it('converts the HY gallery path to the EN gallery path', () => {
+    expect(localePath('/hy/gallery', 'en')).toBe('/en/gallery');
   });
 
   it('is a no-op when already on the target locale', () => {
-    expect(toggleLocalePath('/gallery', 'ru')).toBe('/gallery');
-    expect(toggleLocalePath('/en/gallery', 'en')).toBe('/en/gallery');
+    expect(localePath('/gallery', 'ru')).toBe('/gallery');
+    expect(localePath('/en/gallery', 'en')).toBe('/en/gallery');
+    expect(localePath('/hy/gallery', 'hy')).toBe('/hy/gallery');
   });
 
   // Next's rewrites map '/' -> '/ru' and '/gallery' -> '/ru/gallery' transparently
@@ -28,10 +37,10 @@ describe('toggleLocalePath', () => {
   // (e.g. '/ru') rather than the address-bar path (e.g. '/') on those pages. These
   // internal paths must convert the same way their external equivalents do.
   it('converts the internal RU landing path (as reported by usePathname on a rewritten route) to the EN landing path', () => {
-    expect(toggleLocalePath('/ru', 'en')).toBe('/en');
+    expect(localePath('/ru', 'en')).toBe('/en');
   });
 
   it('converts the internal RU gallery path (as reported by usePathname on a rewritten route) to the EN gallery path', () => {
-    expect(toggleLocalePath('/ru/gallery', 'en')).toBe('/en/gallery');
+    expect(localePath('/ru/gallery', 'en')).toBe('/en/gallery');
   });
 });

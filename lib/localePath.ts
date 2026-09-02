@@ -1,20 +1,21 @@
-export function toggleLocalePath(pathname: string, targetLocale: 'ru' | 'en'): string {
-  const isEn = pathname.startsWith('/en');
+import type { Locale } from '@/content';
 
-  // next.config.ts rewrites '/' -> '/ru' and '/gallery' -> '/ru/gallery' transparently
-  // at the routing layer, but `usePathname()` reports the internal, rewritten path
-  // (e.g. '/ru') rather than the address-bar path (e.g. '/') on those pages. Normalize
-  // a leading '/ru' segment away so those internal paths convert the same way their
-  // external equivalents do.
-  const normalized =
-    !isEn && (pathname === '/ru' || pathname.startsWith('/ru/')) ? pathname.slice(3) || '/' : pathname;
+// Next's rewrites map '/' -> '/ru' and '/gallery' -> '/ru/gallery' transparently
+// at the routing layer, but `usePathname()` reports the internal, rewritten path
+// (e.g. '/ru') rather than the address-bar path (e.g. '/') on those pages. Every
+// locale prefix (including the internal-only 'ru' one) is stripped the same way
+// so external and internal paths convert identically.
+const LOCALE_PREFIXES = ['ru', 'en', 'hy'];
 
-  if (targetLocale === 'en') {
-    if (isEn) return pathname;
-    return normalized === '/' ? '/en' : `/en${normalized}`;
+export function localePath(pathname: string, targetLocale: Locale): string {
+  let canonical = pathname;
+  for (const prefix of LOCALE_PREFIXES) {
+    if (canonical === `/${prefix}` || canonical.startsWith(`/${prefix}/`)) {
+      canonical = canonical.slice(prefix.length + 1) || '/';
+      break;
+    }
   }
 
-  if (!isEn) return normalized;
-  const stripped = pathname.replace(/^\/en/, '');
-  return stripped === '' ? '/' : stripped;
+  if (targetLocale === 'ru') return canonical;
+  return canonical === '/' ? `/${targetLocale}` : `/${targetLocale}${canonical}`;
 }

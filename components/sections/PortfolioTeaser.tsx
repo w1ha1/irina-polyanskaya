@@ -1,5 +1,5 @@
 import { content, type Locale } from '@/content';
-import { photos, teaserSlugs, type Photo } from '@/data/photos';
+import { photos, teaserSlugs, altText, type Photo } from '@/data/photos';
 import { SplitHeading } from '@/components/ui/SplitHeading';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { RevealImage } from '@/components/ui/RevealImage';
@@ -24,7 +24,7 @@ export function PortfolioTeaser({ locale }: { locale: Locale }) {
           <RevealImage
             key={photo.slug}
             src={`/photos/${photo.category}/${photo.slug}.jpg`}
-            alt={photo.alt[locale]}
+            alt={altText(photo.alt, locale)}
             width={photo.width}
             height={photo.height}
             className="aspect-[3/4] w-full"

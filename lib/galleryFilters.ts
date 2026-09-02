@@ -1,10 +1,11 @@
 import { UNCATEGORIZED_CATEGORY, type Photo } from '@/data/photos';
+import type { Locale } from '@/content';
 
 export function buildGalleryFilters(
   photos: Photo[],
-  categoryLabels: Record<string, { ru: string; en: string }>,
+  categoryLabels: Record<string, { ru: string; en: string; hy: string }>,
   allLabel: string,
-  locale: 'ru' | 'en'
+  locale: Locale
 ): { id: string; label: string }[] {
   const present = new Set(photos.map((p) => p.category));
   present.delete(UNCATEGORIZED_CATEGORY);

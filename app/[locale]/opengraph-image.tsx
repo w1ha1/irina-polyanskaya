@@ -5,7 +5,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export function generateStaticParams() {
-  return [{ locale: 'ru' }, { locale: 'en' }];
+  return [{ locale: 'ru' }, { locale: 'en' }, { locale: 'hy' }];
 }
 
 export default async function OpengraphImage({ params }: { params: Promise<{ locale: Locale }> }) {

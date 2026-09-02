@@ -8,7 +8,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import '../globals.css';
 
 export function generateStaticParams() {
-  return [{ locale: 'ru' }, { locale: 'en' }];
+  return [{ locale: 'ru' }, { locale: 'en' }, { locale: 'hy' }];
 }
 
 export async function generateMetadata({
@@ -29,7 +29,7 @@ export async function generateMetadata({
     metadataBase: new URL(siteUrl),
     title: c.meta.title,
     description: c.meta.description,
-    alternates: { canonical: locale === 'ru' ? '/' : '/en' },
+    alternates: { canonical: locale === 'ru' ? '/' : `/${locale}` },
   };
 }
 
@@ -44,14 +44,14 @@ export default async function LocaleLayout({
   // generated type, but layout components do not, so narrowing to `Locale` here
   // (as the brief originally specified) fails `next build`'s typecheck. Widening
   // to `string` matches Next's generated contract; `generateStaticParams` still
-  // guarantees only 'ru' | 'en' are ever produced.
+  // guarantees only 'ru' | 'en' | 'hy' are ever produced.
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
   // Narrow the widened `string` param back to `Locale` (see the comment above)
   // so it can be passed to SiteHeader/SiteFooter, which are typed against the
-  // real union. generateStaticParams guarantees only 'ru' | 'en' are produced.
-  const locale: Locale = rawLocale === 'en' ? 'en' : 'ru';
+  // real union. generateStaticParams guarantees only 'ru' | 'en' | 'hy' are produced.
+  const locale: Locale = rawLocale === 'en' ? 'en' : rawLocale === 'hy' ? 'hy' : 'ru';
 
   return (
     <html lang={locale} className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>

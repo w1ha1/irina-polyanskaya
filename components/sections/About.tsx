@@ -1,5 +1,5 @@
 import { content, type Locale } from '@/content';
-import { aboutPhoto } from '@/data/photos';
+import { aboutPhoto, altText } from '@/data/photos';
 import { HudFrame } from '@/components/ui/HudFrame';
 import { SplitHeading } from '@/components/ui/SplitHeading';
 import { RevealImage } from '@/components/ui/RevealImage';
@@ -12,7 +12,7 @@ export function About({ locale }: { locale: Locale }) {
       <HudFrame label={locale === 'ru' ? 'ПОРТРЕТ АВТОРА' : 'PHOTOGRAPHER'} className="order-2 md:order-1">
         <RevealImage
           src="/photos/about/about-irina.jpg"
-          alt={aboutPhoto.alt[locale]}
+          alt={altText(aboutPhoto.alt, locale)}
           width={aboutPhoto.width}
           height={aboutPhoto.height}
           sizes="(min-width: 768px) 50vw, 100vw"

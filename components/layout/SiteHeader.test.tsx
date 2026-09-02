@@ -9,11 +9,12 @@ vi.mock('next/navigation', () => ({
 import { SiteHeader } from './SiteHeader';
 
 describe('SiteHeader', () => {
-  it('renders RU nav labels and a language switch link to the EN home', () => {
+  it('renders RU nav labels and language links to EN and HY home', () => {
     render(<SiteHeader locale="ru" />);
     expect(screen.getByText('Портфолио')).toBeInTheDocument();
-    const langLink = screen.getByRole('link', { name: 'Switch language' });
-    expect(langLink.getAttribute('href')).toBe('/en');
+    expect(screen.getByRole('link', { name: 'EN' }).getAttribute('href')).toBe('/en');
+    expect(screen.getByRole('link', { name: 'HY' }).getAttribute('href')).toBe('/hy');
+    expect(screen.getByRole('link', { name: 'RU' }).getAttribute('aria-current')).toBe('true');
   });
 
   it('renders the booking CTA linking to Telegram with a prefilled message', () => {

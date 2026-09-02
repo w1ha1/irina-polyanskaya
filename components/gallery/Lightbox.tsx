@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import type { Photo } from '@/data/photos';
+import { altText, type Photo } from '@/data/photos';
 import type { Locale } from '@/content';
 import { nextIndex, prevIndex } from '@/lib/lightboxNav';
 
@@ -46,7 +46,7 @@ export function Lightbox({
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={photo.alt[locale]}
+      aria-label={altText(photo.alt, locale)}
       className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95"
       onClick={onClose}
     >
@@ -75,7 +75,7 @@ export function Lightbox({
       <div className="relative max-h-[85vh] max-w-[85vw]" onClick={(e) => e.stopPropagation()}>
         <Image
           src={`/photos/${photo.category}/${photo.slug}.jpg`}
-          alt={photo.alt[locale]}
+          alt={altText(photo.alt, locale)}
           width={photo.width}
           height={photo.height}
           sizes="85vw"

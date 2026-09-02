@@ -1,4 +1,4 @@
-export type Locale = 'ru' | 'en';
+export type Locale = 'ru' | 'en' | 'hy';
 
 export interface SiteContent {
   meta: {

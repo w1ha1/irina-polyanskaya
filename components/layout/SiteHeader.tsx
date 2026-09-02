@@ -4,8 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { content, type Locale } from '@/content';
-import { toggleLocalePath } from '@/lib/localePath';
+import { localePath } from '@/lib/localePath';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { cn } from '@/lib/cn';
+
+const LOCALES: Locale[] = ['ru', 'en', 'hy'];
+const LOCALE_LABELS: Record<Locale, string> = { ru: 'RU', en: 'EN', hy: 'HY' };
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const pathname = usePathname();
@@ -34,13 +38,18 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Link
-            href={toggleLocalePath(pathname, locale === 'ru' ? 'en' : 'ru')}
-            className="font-mono text-xs uppercase tracking-wider hover:text-wine"
-            aria-label="Switch language"
-          >
-            {locale === 'ru' ? 'EN' : 'RU'}
-          </Link>
+          <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider">
+            {LOCALES.map((l) => (
+              <Link
+                key={l}
+                href={localePath(pathname, l)}
+                aria-current={l === locale ? 'true' : undefined}
+                className={cn(l === locale ? 'text-wine' : 'text-ink/70 hover:text-wine')}
+              >
+                {LOCALE_LABELS[l]}
+              </Link>
+            ))}
+          </div>
           <MagneticButton
             href={`https://t.me/polka977?text=${encodeURIComponent(c.contacts.bookingMessage)}`}
             className="hidden sm:inline-flex"

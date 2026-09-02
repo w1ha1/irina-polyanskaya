@@ -1,5 +1,5 @@
 import { content, type Locale } from '@/content';
-import { heroPhoto } from '@/data/photos';
+import { heroPhoto, altText } from '@/data/photos';
 import { HudFrame } from '@/components/ui/HudFrame';
 import { SplitHeading } from '@/components/ui/SplitHeading';
 import { MagneticButton } from '@/components/ui/MagneticButton';
@@ -27,7 +27,7 @@ export function Hero({ locale }: { locale: Locale }) {
       <HudFrame>
         <RevealImage
           src={`/photos/${heroPhoto.category}/${heroPhoto.slug}.jpg`}
-          alt={heroPhoto.alt[locale]}
+          alt={altText(heroPhoto.alt, locale)}
           width={heroPhoto.width}
           height={heroPhoto.height}
           priority
