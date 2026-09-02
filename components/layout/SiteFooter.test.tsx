@@ -14,6 +14,6 @@ describe('SiteFooter', () => {
 
   it('renders the EN location', () => {
     render(<SiteFooter locale="en" />);
-    expect(screen.getByText('Gyumri, Armenia')).toBeInTheDocument();
+    expect(screen.getByText('Gyumri, Yerevan, Armenia')).toBeInTheDocument();
   });
 });

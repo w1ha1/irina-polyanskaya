@@ -14,11 +14,11 @@ describe('Services', () => {
 
   it('renders all 5 EN services', () => {
     render(<Services locale="en" />);
-    expect(screen.getByText('Portrait')).toBeInTheDocument();
+    expect(screen.getByText('Portrait session')).toBeInTheDocument();
     expect(screen.getByText('Love story')).toBeInTheDocument();
-    expect(screen.getByText('Commercial')).toBeInTheDocument();
-    expect(screen.getByText('Events')).toBeInTheDocument();
-    expect(screen.getByText('Family')).toBeInTheDocument();
+    expect(screen.getByText('Commercial photography')).toBeInTheDocument();
+    expect(screen.getByText('Event photography')).toBeInTheDocument();
+    expect(screen.getByText('Family session')).toBeInTheDocument();
   });
 
   it('renders all 5 cards as plain text, with no photo (no representative commercial photo exists)', () => {
