@@ -71,14 +71,13 @@ export const hy: SiteContent = {
   },
   contacts: {
     heading: 'Կոնտակտներ',
-    location: 'Գյումրի, Երևան, Հայաստան',
+    location: 'Երևան, Գյումրի, Հայաստան',
     telegramLabel: 'Telegram',
     instagramLabel: 'Instagram',
     bookingMessage: 'Բարև Ձեզ! Ուզում եմ գրանցվել լուսանկարահանման։',
   },
   gallery: {
     heading: 'Պորտֆոլիո',
-    allLabel: 'Բոլորը',
   },
   footer: {
     rights: 'Իրինա Պոլյանսկայա',

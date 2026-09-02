@@ -17,7 +17,7 @@ export function Pricing({ locale }: { locale: Locale }) {
         {c.pricing.heading}
       </SplitHeading>
       <div className="mt-6 flex gap-2 font-mono text-xs uppercase tracking-wider">
-        {(['gyumri', 'yerevan'] as const).map((option) => (
+        {(['yerevan', 'gyumri'] as const).map((option) => (
           <button
             key={option}
             type="button"

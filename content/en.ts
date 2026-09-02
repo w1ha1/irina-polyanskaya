@@ -68,14 +68,13 @@ export const en: SiteContent = {
   },
   contacts: {
     heading: 'Contacts',
-    location: 'Gyumri, Yerevan, Armenia',
+    location: 'Yerevan, Gyumri, Armenia',
     telegramLabel: 'Telegram',
     instagramLabel: 'Instagram',
     bookingMessage: "Hi! I'd like to book a photo session.",
   },
   gallery: {
     heading: 'Portfolio',
-    allLabel: 'All',
   },
   footer: {
     rights: 'Irina Polyanskaya',

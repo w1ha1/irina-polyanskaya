@@ -68,14 +68,13 @@ export const ru: SiteContent = {
   },
   contacts: {
     heading: 'Контакты',
-    location: 'Гюмри, Ереван, Армения',
+    location: 'Ереван, Гюмри, Армения',
     telegramLabel: 'Telegram',
     instagramLabel: 'Instagram',
     bookingMessage: 'Здравствуйте! Хочу записаться на фотосессию.',
   },
   gallery: {
     heading: 'Портфолио',
-    allLabel: 'Все',
   },
   footer: {
     rights: 'Ирина Полянская',

@@ -47,7 +47,6 @@ export interface SiteContent {
   };
   gallery: {
     heading: string;
-    allLabel: string;
   };
   footer: {
     rights: string;
