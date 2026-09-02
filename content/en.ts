@@ -41,10 +41,11 @@ export const en: SiteContent = {
   },
   pricing: {
     heading: 'Pricing',
+    cityToggle: { gyumri: 'Gyumri', yerevan: 'Yerevan' },
     tiers: [
       {
         name: 'STANDARD',
-        price: '40,000 ֏',
+        priceByCity: { gyumri: '40,000 ֏', yerevan: '50,000 ֏' },
         features: [
           '1–1.5 hour session',
           '50–70 edited photos (5–10 retouched)',
@@ -54,7 +55,7 @@ export const en: SiteContent = {
       },
       {
         name: 'EXPRESS',
-        price: '25,000 ֏',
+        priceByCity: { gyumri: '25,000 ֏', yerevan: '35,000 ֏' },
         features: [
           'Up to 30 minutes',
           '20–25 edited photos (up to 5 retouched)',
