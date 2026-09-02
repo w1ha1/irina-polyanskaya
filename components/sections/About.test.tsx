@@ -6,13 +6,13 @@ describe('About', () => {
   it('renders the RU heading and bio', () => {
     render(<About locale="ru" />);
     expect(screen.getByRole('heading', { name: 'Обо мне' })).toBeInTheDocument();
-    expect(screen.getByText(/Пять лет работы с портретом/)).toBeInTheDocument();
+    expect(screen.getByText(/Меня зовут Ирина/)).toBeInTheDocument();
   });
 
   it('renders the EN heading and bio', () => {
     render(<About locale="en" />);
     expect(screen.getByRole('heading', { name: 'About' })).toBeInTheDocument();
-    expect(screen.getByText(/Five years shooting portraits/)).toBeInTheDocument();
+    expect(screen.getByText(/My name is Irina/)).toBeInTheDocument();
   });
 
   it('renders the about photo with locale-specific alt text', () => {

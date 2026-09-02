@@ -5,7 +5,7 @@ import { SiteFooter } from './SiteFooter';
 describe('SiteFooter', () => {
   it('renders the RU location and both contact links', () => {
     render(<SiteFooter locale="ru" />);
-    expect(screen.getByText('Гюмри, Армения')).toBeInTheDocument();
+    expect(screen.getByText('Гюмри, Ереван, Армения')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Telegram' }).getAttribute('href')).toMatch(/t\.me\/polka977/);
     expect(screen.getByRole('link', { name: 'Instagram' }).getAttribute('href')).toBe(
       'https://instagram.com/polyanskaya_photo7'

@@ -30,8 +30,6 @@ export const teaserSlugs: string[] = [
   'love-21',
   'love-02',
   'portrait-09',
-  'portrait-12',
-  'portrait-23',
 ];
 
 export const aboutPhoto = {

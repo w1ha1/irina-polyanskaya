@@ -5,9 +5,9 @@ import { Hero } from './Hero';
 describe('Hero', () => {
   it('renders the RU kicker, name, and subhead', () => {
     render(<Hero locale="ru" />);
-    expect(screen.getByText('ФОТОГРАФ · ГЮМРИ')).toBeInTheDocument();
+    expect(screen.getByText('ФОТОГРАФ · ГЮМРИ · ЕРЕВАН')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Ирина Полянская');
-    expect(screen.getByText(/Портретная, love story/)).toBeInTheDocument();
+    expect(screen.getByText(/Портретная и love story/)).toBeInTheDocument();
   });
 
   it('renders the primary CTA linking to Telegram and secondary CTA to the gallery', () => {

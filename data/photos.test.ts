@@ -34,8 +34,8 @@ describe('photo data', () => {
     expect(photos.some((p) => p.slug === heroPhoto.slug)).toBe(true);
   });
 
-  it('picks 8 teaser slugs that all exist in the gallery set', () => {
-    expect(teaserSlugs).toHaveLength(8);
+  it('picks 6 teaser slugs that all exist in the gallery set', () => {
+    expect(teaserSlugs).toHaveLength(6);
     const slugs = new Set(photos.map((p) => p.slug));
     for (const s of teaserSlugs) expect(slugs.has(s)).toBe(true);
   });
