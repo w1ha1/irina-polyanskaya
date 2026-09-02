@@ -15,9 +15,9 @@ export const ru: SiteContent = {
     bookCta: 'Записаться',
   },
   hero: {
-    kicker: 'ФОТОГРАФ · ГЮМРИ · ЕРЕВАН',
+    kicker: 'ФОТОГРАФ · ЕРЕВАН · ГЮМРИ',
     name: 'Ирина Полянская',
-    subhead: 'Портретная и love story. Снимаю в Гюмри и Ереване.',
+    subhead: 'Авторские съёмки с атмосферой кино\nLove Story & portraits\nСнимаю в Ереване / Гюмри',
     ctaPrimary: 'Записаться на съёмку',
     ctaSecondary: 'Смотреть работы',
   },

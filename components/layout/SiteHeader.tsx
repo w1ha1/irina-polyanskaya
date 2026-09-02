@@ -14,7 +14,6 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const base = locale === 'ru' ? '' : '/en';
 
   const navLinks = [
-    { href: `${base}/#about`, label: c.nav.about },
     { href: `${base}/gallery`, label: c.nav.portfolio },
     { href: `${base}/#services`, label: c.nav.services },
     { href: `${base}/#pricing`, label: c.nav.pricing },
