@@ -44,7 +44,7 @@ export const ru: SiteContent = {
     tiers: [
       {
         name: 'STANDARD',
-        priceByCity: { gyumri: '40 000 ֏', yerevan: '50 000 ֏' },
+        priceByCity: { gyumri: '40 000 ֏', yerevan: '60 000 ֏' },
         features: [
           '1–1.5 часа съёмки',
           '1–2 образа',
@@ -55,7 +55,7 @@ export const ru: SiteContent = {
       },
       {
         name: 'EXPRESS',
-        priceByCity: { gyumri: '25 000 ֏', yerevan: '35 000 ֏' },
+        priceByCity: { gyumri: '25 000 ֏', yerevan: '45 000 ֏' },
         features: [
           'До 30 минут съёмки',
           '1 образ / 1 локация',
@@ -75,6 +75,7 @@ export const ru: SiteContent = {
   },
   gallery: {
     heading: 'Портфолио',
+    allLabel: 'Все',
   },
   footer: {
     rights: 'Ирина Полянская',

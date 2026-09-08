@@ -47,7 +47,7 @@ export const hy: SiteContent = {
     tiers: [
       {
         name: 'STANDARD',
-        priceByCity: { gyumri: '40 000 ֏', yerevan: '50 000 ֏' },
+        priceByCity: { gyumri: '40 000 ֏', yerevan: '60 000 ֏' },
         features: [
           '1–1.5 ժամ նկարահանում',
           '1–2 կերպար',
@@ -58,7 +58,7 @@ export const hy: SiteContent = {
       },
       {
         name: 'EXPRESS',
-        priceByCity: { gyumri: '25 000 ֏', yerevan: '35 000 ֏' },
+        priceByCity: { gyumri: '25 000 ֏', yerevan: '45 000 ֏' },
         features: [
           'Մինչև 30 րոպե նկարահանում',
           '1 կերպար / 1 վայր',
@@ -78,6 +78,7 @@ export const hy: SiteContent = {
   },
   gallery: {
     heading: 'Պորտֆոլիո',
+    allLabel: 'Բոլորը',
   },
   footer: {
     rights: 'Իրինա Պոլյանսկայա',

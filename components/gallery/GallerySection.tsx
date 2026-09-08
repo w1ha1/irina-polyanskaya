@@ -1,16 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import type { Photo } from '@/data/photos';
+import type { Photo, PhotoCategory } from '@/data/photos';
 import type { Locale } from '@/content';
 import { GalleryGrid } from './GalleryGrid';
 import { Lightbox } from './Lightbox';
 
 export function GallerySection({
   photos,
+  filters,
   locale,
 }: {
   photos: Photo[];
+  filters: { id: 'all' | PhotoCategory; label: string }[];
   locale: Locale;
 }) {
   const [lightbox, setLightbox] = useState<{ photos: Photo[]; index: number } | null>(null);
@@ -19,6 +21,7 @@ export function GallerySection({
     <>
       <GalleryGrid
         photos={photos}
+        filters={filters}
         locale={locale}
         onPhotoClick={(photo, visiblePhotos) =>
           setLightbox({

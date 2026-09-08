@@ -44,7 +44,7 @@ export const en: SiteContent = {
     tiers: [
       {
         name: 'STANDARD',
-        priceByCity: { gyumri: '40,000 ֏', yerevan: '50,000 ֏' },
+        priceByCity: { gyumri: '40,000 ֏', yerevan: '60,000 ֏' },
         features: [
           '1–1.5 hour session',
           '1–2 looks',
@@ -55,7 +55,7 @@ export const en: SiteContent = {
       },
       {
         name: 'EXPRESS',
-        priceByCity: { gyumri: '25,000 ֏', yerevan: '35,000 ֏' },
+        priceByCity: { gyumri: '25,000 ֏', yerevan: '45,000 ֏' },
         features: [
           'Up to 30 minutes',
           '1 look / 1 location',
@@ -75,6 +75,7 @@ export const en: SiteContent = {
   },
   gallery: {
     heading: 'Portfolio',
+    allLabel: 'All',
   },
   footer: {
     rights: 'Irina Polyanskaya',
