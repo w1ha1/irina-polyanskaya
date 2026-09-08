@@ -1,5 +1,6 @@
 import { content, type Locale } from '@/content';
 import { aboutPhoto, altText } from '@/data/photos';
+import { withBasePath } from '@/lib/basePath';
 import { HudFrame } from '@/components/ui/HudFrame';
 import { SplitHeading } from '@/components/ui/SplitHeading';
 import { RevealImage } from '@/components/ui/RevealImage';
@@ -11,7 +12,7 @@ export function About({ locale }: { locale: Locale }) {
     <section id="about" className="grid gap-8 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
       <HudFrame label={locale === 'ru' ? 'ПОРТРЕТ АВТОРА' : 'PHOTOGRAPHER'} className="order-2 md:order-1">
         <RevealImage
-          src="/photos/about/about-irina.jpg"
+          src={withBasePath('/photos/about/about-irina.jpg')}
           alt={altText(aboutPhoto.alt, locale)}
           width={aboutPhoto.width}
           height={aboutPhoto.height}

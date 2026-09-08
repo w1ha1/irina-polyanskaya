@@ -19,17 +19,19 @@ export async function generateMetadata({
   const { locale } = await params;
   const c = content[locale];
   // Netlify sets `URL` to the site's canonical production URL (scheme included).
-  // Falls back to Vercel's `VERCEL_URL` (bare host, needs a scheme) in case this
-  // ever gets deployed there again, then to localhost for local dev.
+  // Falls back to Vercel's `VERCEL_URL` (bare host, needs a scheme), then the
+  // GitHub Pages URL this repo deploys to (GITHUB_ACTIONS is set by every GH
+  // Actions runner — see next.config.ts's basePath comment), then localhost.
   const siteUrl =
     process.env.URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined) ??
+    (process.env.GITHUB_ACTIONS ? 'https://w1ha1.github.io/irina-polyanskaya' : undefined) ??
     'http://localhost:3000';
   return {
     metadataBase: new URL(siteUrl),
     title: c.meta.title,
     description: c.meta.description,
-    alternates: { canonical: locale === 'ru' ? '/' : `/${locale}` },
+    alternates: { canonical: `/${locale}` },
   };
 }
 

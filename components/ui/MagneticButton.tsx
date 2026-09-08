@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, type ReactNode, type MouseEvent } from 'react';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { cn } from '@/lib/cn';
@@ -38,17 +39,35 @@ export function MagneticButton({
   if (href) {
     const isExternal = /^https?:\/\//.test(href);
 
+    if (isExternal) {
+      return (
+        <a
+          ref={ref as React.RefObject<HTMLAnchorElement>}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className={cn(baseClass, className)}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    // next/link (not a plain <a>) so basePath is applied automatically —
+    // GitHub Pages serves this site from a /irina-polyanskaya subpath, see
+    // next.config.ts.
     return (
-      <a
+      <Link
         ref={ref as React.RefObject<HTMLAnchorElement>}
         href={href}
-        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         className={cn(baseClass, className)}
       >
         {children}
-      </a>
+      </Link>
     );
   }
 

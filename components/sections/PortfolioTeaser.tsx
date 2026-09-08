@@ -1,12 +1,13 @@
 import { content, type Locale } from '@/content';
 import { photos, teaserSlugs, altText, type Photo } from '@/data/photos';
+import { withBasePath } from '@/lib/basePath';
 import { SplitHeading } from '@/components/ui/SplitHeading';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { RevealImage } from '@/components/ui/RevealImage';
 
 export function PortfolioTeaser({ locale }: { locale: Locale }) {
   const c = content[locale];
-  const base = locale === 'ru' ? '' : '/en';
+  const base = `/${locale}`;
   const teaserPhotos = teaserSlugs
     .map((slug) => photos.find((p) => p.slug === slug))
     .filter((p): p is Photo => Boolean(p));
@@ -23,7 +24,7 @@ export function PortfolioTeaser({ locale }: { locale: Locale }) {
         {teaserPhotos.map((photo) => (
           <RevealImage
             key={photo.slug}
-            src={`/photos/${photo.category}/${photo.slug}.jpg`}
+            src={withBasePath(`/photos/${photo.category}/${photo.slug}.jpg`)}
             alt={altText(photo.alt, locale)}
             width={photo.width}
             height={photo.height}

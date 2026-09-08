@@ -15,7 +15,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const c = content[locale];
-  const base = locale === 'ru' ? '' : '/en';
+  const base = `/${locale}`;
 
   const navLinks = [
     { href: `${base}/gallery`, label: c.nav.portfolio },
@@ -27,7 +27,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/90 backdrop-blur">
       <div className="flex items-center justify-between px-6 py-4">
-        <Link href={locale === 'ru' ? '/' : '/en'} className="font-display text-xl tracking-wide">
+        <Link href={base} className="font-display text-xl tracking-wide">
           {c.hero.name}
         </Link>
         <nav className="hidden items-center gap-6 font-mono text-xs uppercase tracking-wider md:flex">

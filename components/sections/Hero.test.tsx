@@ -15,7 +15,7 @@ describe('Hero', () => {
     expect(screen.getByRole('link', { name: 'Записаться на съёмку' }).getAttribute('href')).toMatch(
       /t\.me\/polka977/
     );
-    expect(screen.getByRole('link', { name: 'Смотреть работы' }).getAttribute('href')).toBe('/gallery');
+    expect(screen.getByRole('link', { name: 'Смотреть работы' }).getAttribute('href')).toBe('/ru/gallery');
   });
 
   it('renders the EN secondary CTA pointing at /en/gallery', () => {

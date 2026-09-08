@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { altText, type Photo, type PhotoCategory } from '@/data/photos';
 import type { Locale } from '@/content';
+import { withBasePath } from '@/lib/basePath';
 import { filterPhotos } from '@/lib/filterPhotos';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { CategoryFilter } from './CategoryFilter';
@@ -55,7 +56,7 @@ export function GalleryGrid({
             className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-sm"
           >
             <Image
-              src={`/photos/${photo.category}/${photo.slug}.jpg`}
+              src={withBasePath(`/photos/${photo.category}/${photo.slug}.jpg`)}
               alt={altText(photo.alt, locale)}
               width={photo.width}
               height={photo.height}

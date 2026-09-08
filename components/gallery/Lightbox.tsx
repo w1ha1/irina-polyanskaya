@@ -4,6 +4,7 @@ import { useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import { altText, type Photo } from '@/data/photos';
 import type { Locale } from '@/content';
+import { withBasePath } from '@/lib/basePath';
 import { nextIndex, prevIndex } from '@/lib/lightboxNav';
 
 export function Lightbox({
@@ -74,7 +75,7 @@ export function Lightbox({
       )}
       <div className="relative max-h-[85vh] max-w-[85vw]" onClick={(e) => e.stopPropagation()}>
         <Image
-          src={`/photos/${photo.category}/${photo.slug}.jpg`}
+          src={withBasePath(`/photos/${photo.category}/${photo.slug}.jpg`)}
           alt={altText(photo.alt, locale)}
           width={photo.width}
           height={photo.height}

@@ -10,7 +10,7 @@ describe('PortfolioTeaser', () => {
 
   it('links "view all" to the RU gallery', () => {
     render(<PortfolioTeaser locale="ru" />);
-    expect(screen.getByRole('link', { name: 'Смотреть всё портфолио' }).getAttribute('href')).toBe('/gallery');
+    expect(screen.getByRole('link', { name: 'Смотреть всё портфолио' }).getAttribute('href')).toBe('/ru/gallery');
   });
 
   it('links "view all" to the EN gallery', () => {
