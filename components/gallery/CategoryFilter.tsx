@@ -37,11 +37,17 @@ export function CategoryFilter({
           aria-selected={active === f.id}
           onClick={() => handleClick(f.id)}
           className={cn(
-            'rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors active:scale-95',
+            'relative overflow-hidden rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors active:scale-95',
             active === f.id ? 'border-wine bg-wine text-paper' : 'border-ink/15 text-ink/70 hover:border-wine/50'
           )}
         >
           {f.label}
+          {active === f.id && !reducedMotion && (
+            <span
+              aria-hidden="true"
+              className="animate-pill-shimmer pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-gold/60 to-transparent"
+            />
+          )}
         </button>
       ))}
     </div>
