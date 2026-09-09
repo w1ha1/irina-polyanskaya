@@ -19,19 +19,3 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
 }
-
-/* A light streak sweeping once across a just-activated filter pill — like
-   light catching fabric. Plays once (no `infinite`); the element itself is
-   only mounted for the duration of the sweep, see CategoryFilter.tsx. */
-@keyframes pill-shimmer {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-.animate-pill-shimmer {
-  animation: pill-shimmer 0.9s ease-out;
-}
