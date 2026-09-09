@@ -3,25 +3,21 @@ import { render, screen } from '@testing-library/react';
 import { Services } from './Services';
 
 describe('Services', () => {
-  it('renders all 5 RU services', () => {
+  it('renders both RU services', () => {
     render(<Services locale="ru" />);
-    expect(screen.getByText('Портретная съёмка')).toBeInTheDocument();
+    expect(screen.getByText('Индивидуальная')).toBeInTheDocument();
+    expect(screen.getByText('История про Вас.')).toBeInTheDocument();
     expect(screen.getByText('Love story')).toBeInTheDocument();
-    expect(screen.getByText('Коммерческая съёмка')).toBeInTheDocument();
-    expect(screen.getByText('Съёмка мероприятий')).toBeInTheDocument();
-    expect(screen.getByText('Семейная съёмка')).toBeInTheDocument();
+    expect(screen.getByText('Ваша история — в кадрах, взглядах и моменте.')).toBeInTheDocument();
   });
 
-  it('renders all 5 EN services', () => {
+  it('renders both EN services', () => {
     render(<Services locale="en" />);
-    expect(screen.getByText('Portrait session')).toBeInTheDocument();
+    expect(screen.getByText('Individual')).toBeInTheDocument();
     expect(screen.getByText('Love story')).toBeInTheDocument();
-    expect(screen.getByText('Commercial photography')).toBeInTheDocument();
-    expect(screen.getByText('Event photography')).toBeInTheDocument();
-    expect(screen.getByText('Family session')).toBeInTheDocument();
   });
 
-  it('renders all 5 cards as plain text, with no photo (no representative commercial photo exists)', () => {
+  it('renders the cards as plain text, with no photo', () => {
     render(<Services locale="ru" />);
     expect(screen.queryAllByRole('img')).toHaveLength(0);
   });

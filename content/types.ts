@@ -37,6 +37,7 @@ export interface SiteContent {
     cityToggle: { gyumri: string; yerevan: string };
     tiers: { name: string; priceByCity: { gyumri: string; yerevan: string }; features: string[] }[];
     footnote: string;
+    prepaymentNote: string;
   };
   contacts: {
     heading: string;

@@ -32,10 +32,8 @@ export const ru: SiteContent = {
   services: {
     heading: 'Услуги',
     items: [
-      { title: 'Портретная съёмка', description: 'Индивидуальная с акцентом на естественность и характер.' },
-      { title: 'Love story', description: 'Съёмка пары' },
-      { title: 'Съёмка мероприятий', description: '?' },
-      { title: 'Семейная съёмка', description: '?' },
+      { title: 'Индивидуальная', description: 'История про Вас.' },
+      { title: 'Love story', description: 'Ваша история — в кадрах, взглядах и моменте.' },
     ],
   },
   pricing: {
@@ -65,6 +63,7 @@ export const ru: SiteContent = {
       },
     ],
     footnote: 'Дополнительное фото в ретуши — 1500 ֏. Студия и визажист оплачиваются отдельно.',
+    prepaymentNote: '* Бронирование даты и времени — по предоплате 50% от стоимости выбранного пакета.',
   },
   contacts: {
     heading: 'Контакты',

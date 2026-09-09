@@ -31,4 +31,9 @@ describe('Pricing', () => {
     render(<Pricing locale="ru" />);
     expect(screen.getByText(/1500 ֏/)).toBeInTheDocument();
   });
+
+  it('renders the prepayment note', () => {
+    render(<Pricing locale="ru" />);
+    expect(screen.getByText(/50% от стоимости выбранного пакета/)).toBeInTheDocument();
+  });
 });

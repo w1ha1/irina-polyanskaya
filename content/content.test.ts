@@ -21,9 +21,9 @@ describe('content parity across locales', () => {
     expect(keys(content.hy).sort()).toEqual(ruKeys);
   });
 
-  it('services has exactly 5 items in every locale', () => {
+  it('services has exactly 2 items in every locale', () => {
     for (const locale of locales) {
-      expect(content[locale].services.items).toHaveLength(5);
+      expect(content[locale].services.items).toHaveLength(2);
     }
   });
 

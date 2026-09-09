@@ -35,10 +35,8 @@ export const hy: SiteContent = {
   services: {
     heading: 'Ծառայություններ',
     items: [
-      { title: 'Դիմանկարային նկարահանում', description: 'Անհատական՝ շեշտը դնելով բնականության և բնավորության վրա։' },
-      { title: 'Love story', description: 'Զույգի նկարահանում' },
-      { title: 'Միջոցառումների նկարահանում', description: '?' },
-      { title: 'Ընտանեկան նկարահանում', description: '?' },
+      { title: 'Անհատական', description: 'Ձեր պատմությունը։' },
+      { title: 'Love story', description: 'Ձեր պատմությունը՝ կադրերում, հայացքներում ու պահի մեջ։' },
     ],
   },
   pricing: {
@@ -68,6 +66,7 @@ export const hy: SiteContent = {
       },
     ],
     footnote: 'Լրացուցիչ մշակված լուսանկար՝ 1500 ֏։ Ստուդիան և դիմահարդարը վճարվում են առանձին։',
+    prepaymentNote: '* Ամսաթվի ու ժամի ամրագրումը կատարվում է ընտրված փաթեթի արժեքի 50%-ի կանխավճարով։',
   },
   contacts: {
     heading: 'Կոնտակտներ',

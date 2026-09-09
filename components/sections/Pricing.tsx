@@ -46,6 +46,7 @@ export function Pricing({ locale }: { locale: Locale }) {
         ))}
       </div>
       <p className="mt-8 max-w-2xl text-sm text-ink/60">{c.pricing.footnote}</p>
+      <p className="mt-2 max-w-2xl text-sm text-ink/60">{c.pricing.prepaymentNote}</p>
     </section>
   );
 }

@@ -32,10 +32,8 @@ export const en: SiteContent = {
   services: {
     heading: 'Services',
     items: [
-      { title: 'Portrait session', description: 'Individual, focused on a natural look and character.' },
-      { title: 'Love story', description: 'Couple session' },
-      { title: 'Event photography', description: '?' },
-      { title: 'Family session', description: '?' },
+      { title: 'Individual', description: 'Your story.' },
+      { title: 'Love story', description: 'Your story — in frames, glances, and the moment.' },
     ],
   },
   pricing: {
@@ -65,6 +63,7 @@ export const en: SiteContent = {
       },
     ],
     footnote: 'Additional retouched photo — 1,500 ֏. Studio and makeup artist billed separately.',
+    prepaymentNote: '* Booking a date and time requires a 50% prepayment of the selected package price.',
   },
   contacts: {
     heading: 'Contacts',
