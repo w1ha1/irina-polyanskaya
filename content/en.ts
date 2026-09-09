@@ -32,7 +32,7 @@ export const en: SiteContent = {
   services: {
     heading: 'Services',
     items: [
-      { title: 'Individual', description: 'Your story.' },
+      { title: 'Individual session', description: 'Your story.' },
       { title: 'Love story', description: 'Your story — in frames, glances, and the moment.' },
     ],
   },

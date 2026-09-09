@@ -32,7 +32,7 @@ export const ru: SiteContent = {
   services: {
     heading: 'Услуги',
     items: [
-      { title: 'Индивидуальная', description: 'История про Вас.' },
+      { title: 'Индивидуальная съёмка', description: 'История про Вас.' },
       { title: 'Love story', description: 'Ваша история — в кадрах, взглядах и моменте.' },
     ],
   },

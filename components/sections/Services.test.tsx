@@ -5,7 +5,7 @@ import { Services } from './Services';
 describe('Services', () => {
   it('renders both RU services', () => {
     render(<Services locale="ru" />);
-    expect(screen.getByText('Индивидуальная')).toBeInTheDocument();
+    expect(screen.getByText('Индивидуальная съёмка')).toBeInTheDocument();
     expect(screen.getByText('История про Вас.')).toBeInTheDocument();
     expect(screen.getByText('Love story')).toBeInTheDocument();
     expect(screen.getByText('Ваша история — в кадрах, взглядах и моменте.')).toBeInTheDocument();
@@ -13,7 +13,7 @@ describe('Services', () => {
 
   it('renders both EN services', () => {
     render(<Services locale="en" />);
-    expect(screen.getByText('Individual')).toBeInTheDocument();
+    expect(screen.getByText('Individual session')).toBeInTheDocument();
     expect(screen.getByText('Love story')).toBeInTheDocument();
   });
 

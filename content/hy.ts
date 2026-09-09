@@ -35,7 +35,7 @@ export const hy: SiteContent = {
   services: {
     heading: 'Ծառայություններ',
     items: [
-      { title: 'Անհատական', description: 'Ձեր պատմությունը։' },
+      { title: 'Անհատական նկարահանում', description: 'Ձեր պատմությունը։' },
       { title: 'Love story', description: 'Ձեր պատմությունը՝ կադրերում, հայացքներում ու պահի մեջ։' },
     ],
   },
