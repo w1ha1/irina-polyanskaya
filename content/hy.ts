@@ -5,9 +5,9 @@ import type { SiteContent } from './types';
 // speaker to review before this is trusted in front of Armenian-speaking clients.
 export const hy: SiteContent = {
   meta: {
-    title: 'Իրինա Պոլյանսկայա — լուսանկարիչ Գյումրիում և Երևանում',
+    title: 'Իրինա Պոլյանսկայա — լուսանկարիչ Երևանում և Գյումրիում',
     description:
-      'Դիմանկարային և love story նկարահանումներ Գյումրիում և Երևանում։ Դիտեք պորտֆոլիոն և գրանցվեք լուսանկարահանման։',
+      'Դիմանկարային և love story նկարահանումներ Երևանում և Գյումրիում։ Դիտեք պորտֆոլիոն և գրանցվեք լուսանկարահանման։',
   },
   nav: {
     about: 'Իմ մասին',

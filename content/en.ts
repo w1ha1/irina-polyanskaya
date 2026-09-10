@@ -2,9 +2,9 @@ import type { SiteContent } from './types';
 
 export const en: SiteContent = {
   meta: {
-    title: 'Irina Polyanskaya — Photographer in Gyumri and Yerevan',
+    title: 'Irina Polyanskaya — Photographer in Yerevan and Gyumri',
     description:
-      'Portrait and love story photography in Gyumri and Yerevan. Browse the portfolio and book a session.',
+      'Portrait and love story photography in Yerevan and Gyumri. Browse the portfolio and book a session.',
   },
   nav: {
     about: 'About',
