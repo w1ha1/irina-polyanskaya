@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { photos, heroPhoto, teaserSlugs, aboutPhoto, rotateOnCopy, UNCATEGORIZED_CATEGORY } from './photos';
 
 describe('photo data', () => {
-  it('has exactly 66 gallery photos', () => {
-    expect(photos).toHaveLength(66);
+  it('has exactly 63 gallery photos', () => {
+    expect(photos).toHaveLength(63);
   });
 
   it('has the expected count per category', () => {
@@ -12,8 +12,8 @@ describe('photo data', () => {
       return acc;
     }, {});
     expect(counts[UNCATEGORIZED_CATEGORY]).toBe(1);
-    expect(counts['love-story']).toBe(35);
-    expect(counts.portrait).toBe(30);
+    expect(counts['love-story']).toBe(33);
+    expect(counts.portrait).toBe(29);
   });
 
   it('has unique slugs', () => {
